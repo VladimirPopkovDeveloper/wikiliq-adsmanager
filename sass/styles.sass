@@ -9,20 +9,22 @@ $liq-blue: #0693e3
 $liq-purple: #9b51e0
 $liq-orange: #ff6900
 // Redeclaring
+$section-padding-desktop: 1.5rem .75rem
 $navbar-item-color: #000
 $navbar-item-hover-color: #000
 $navbar-item-active-color: #000
 $navbar-item-hover-background-color: none
 $navbar-item-active-background-color: none
 $navbar-dropdown-arrow: #000
-$navbar-height: 2rem
+$navbar-dropdown-item-hover-color: $liq-red
+$navbar-dropdown-item-hover-background-color: none
+$navbar-height: 4.25rem
 $hr-height: 1px
 $hr-margin: 0
 $button-padding-horizontal: 2.5em
-$footer-background-color: #222
+$footer-background-color: #000
 $footer-color: #ddd
-$footer-padding: 1rem
-
+$footer-padding: .5rem
 $success: $liq-green
 $primary: $liq-teal
 $warning: $liq-yellow
@@ -78,6 +80,11 @@ p
 		margin-bottom: 0
 a
 	+transition
+// Sections
+.footer a
+	color: $liq-blue
+	&:hover
+		color: $liq-red
 // Components
 .tabs:not(:last-child)
 	margin-bottom: 0
@@ -85,6 +92,7 @@ a
 	background-color: $white
 	border: 1px solid $tabs-border-bottom-color
 	border-top: none
+	border-radius: 0 0 $tabs-boxed-link-radius $tabs-boxed-link-radius
 	padding: 1.5rem
 .tab-content-box
 	display: none
@@ -101,7 +109,7 @@ a
 		position: absolute
 		height: 2px
 		width: 0
-		bottom: .5rem
+		bottom: 1.25rem
 		left: 50%
 		background-color: $liq-red
 		transform: translateX(-50%)
