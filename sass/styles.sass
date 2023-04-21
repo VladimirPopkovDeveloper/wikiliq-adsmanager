@@ -1,16 +1,21 @@
 // Custom style SASS | Vladimir Popkov Studio ©2023 | https://vk.com/vladimir_popkov | For WikiLiq Ads Manager | feat. Alexander & Vlad | Based on Bulma CSS Framework
 @charset "utf-8"
 // Base Colors
-$perehod-brown: #4b210c
-$perehod-purple: #ac0d6f
-$perehod-orange: #d46809
-$perehod-yellow: #fac624
-$perehod-yellow-light: #fddd54
-$perehod-violet: #8b17a0
-$perehod-blue: #1836bd
-$perehod-teal: #88b5b8
-$perehod-teal-light: #bad9dc
+$liq-red: #ff2f2f
+$liq-teal: #7bdcb5
+$liq-green: #00d084
+$liq-yellow: #fcb900
+$liq-blue: #0693e3
+$liq-purple: #9b51e0
+$liq-orange: #ff6900
 // Redeclaring
+$navbar-item-color: #000
+$navbar-item-hover-color: #000
+$navbar-item-active-color: #000
+$navbar-item-hover-background-color: none
+$navbar-item-active-background-color: none
+$navbar-dropdown-arrow: #000
+$navbar-height: 2rem
 $hr-height: 1px
 $hr-margin: 0
 $button-padding-horizontal: 2.5em
@@ -18,16 +23,13 @@ $footer-background-color: #222
 $footer-color: #ddd
 $footer-padding: 1rem
 
-$primary: $perehod-teal
-$warning: $perehod-yellow
-$danger: $perehod-purple
-$link: $perehod-blue
+$success: $liq-green
+$primary: $liq-teal
+$warning: $liq-yellow
+$danger: $liq-red
+$link: $liq-blue
 // Base
 @import "../node_modules/bulma/bulma.sass"
-// Fonts
-@import "../scss/fontawesome.scss"
-@import "../scss/solid.scss"
-@import "../scss/regular.scss"
 // Shadows
 =base-shadow
 	-webkit-box-shadow: 0rem 0.25rem 0.95rem 0rem rgba(0,0,0,0.3)
@@ -60,9 +62,9 @@ $link: $perehod-blue
 		background-color: $perehod-yellow
 // Base tags
 body
-	background-color: $white
+	font-family: 'Roboto', sans-serif
+	background-color: #fafafa
 h1, h2, h3, h4, h5, h6
-	font-family: 'Alumni Sans', sans-serif
 	font-weight: 400
 h2
 	font-size: $size-3
@@ -76,3 +78,34 @@ p
 		margin-bottom: 0
 a
 	+transition
+// Components
+.tabs:not(:last-child)
+	margin-bottom: 0
+.tab-content
+	background-color: $white
+	border: 1px solid $tabs-border-bottom-color
+	border-top: none
+	padding: 1.5rem
+.tab-content-box
+	display: none
+.tab-content-box.is-active
+	display: block
+.navbar
+	border-bottom: 1px #eaeaea solid
+	+transition
+.navbar-item.underlined
+	font-weight: 500
+	font-size: .9rem
+	&::before
+		content: ''
+		position: absolute
+		height: 2px
+		width: 0
+		bottom: .5rem
+		left: 50%
+		background-color: $liq-red
+		transform: translateX(-50%)
+		transition: width 0.4s ease-in-out, transform 0.3s ease-in-out
+	&:hover::before
+		width: calc(100% - 1.5rem)
+		transform: translateX(-50%)

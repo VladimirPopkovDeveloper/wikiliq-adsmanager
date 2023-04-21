@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ads Manager: Encyclopedia of Liquor Brands</title>
     <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="css/fonts.min.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -38,6 +39,7 @@
   </head>
   <body>
     <nav
+      id="top-navbar"
       class="navbar is-fixed-top"
       role="navigation"
       aria-label="main navigation"
@@ -52,7 +54,7 @@
           class="navbar-burger"
           aria-label="menu"
           aria-expanded="false"
-          data-target="navbarBasicExample"
+          data-target="top-navbar-menu"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -60,13 +62,13 @@
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div id="top-navbar-menu" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item"> Home </a>
+          <a class="navbar-item underlined"> Home </a>
 
-          <a class="navbar-item"> Documentation </a>
+          <a class="navbar-item underlined"> Documentation </a>
 
-          <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-item underlined has-dropdown is-hoverable">
             <a class="navbar-link"> More </a>
 
             <div class="navbar-dropdown">
@@ -92,12 +94,49 @@
       </div>
     </nav>
     <section class="section">
-      <div class="container">
-        <h1 class="title">Hi! And welcome to my channel!</h1>
-        <p class="subtitle">My first website with <strong>Bulma</strong>!</p>
-        <p><i class="fa-regular fa-user"></i></p>
-        <p><i class="fa-solid fa-user"></i></p>
+      <div class="tabs is-boxed is-centered is-fullwidth">
+        <ul>
+          <li class="is-active">
+            <a>
+              <span class="icon is-small"
+                ><i class="fa-regular fa-folder"></i
+              ></span>
+              <span>Кампании</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="icon is-small"
+                ><i class="fa-regular fa-rectangle-list"></i
+              ></span>
+              <span>Группы объявлений</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="icon is-small"
+                ><i class="fa-regular fa-note-sticky"></i
+              ></span>
+              <span>Объявления</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="tab-content" class="tab-content">
+        <div id="tab-0" class="tab-content-box is-active">
+          <h2>Кампании</h2>
+          <p>Содержимое для вкладки "Кампании" здесь.</p>
+        </div>
+        <div id="tab-1" class="tab-content-box">
+          <h2>Группы объявлений</h2>
+          <p>Содержимое для вкладки "Группы объявлений" здесь.</p>
+        </div>
+        <div id="tab-2" class="tab-content-box">
+          <h2>Объявления</h2>
+          <p>Содержимое для вкладки "Объявления" здесь.</p>
+        </div>
       </div>
     </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

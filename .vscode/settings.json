@@ -6,7 +6,10 @@
       "savePath": "css"
     }
   ],
-  "liveSassCompile.settings.includeItems": ["sass/styles.sass"],
+  "liveSassCompile.settings.includeItems": [
+    "sass/styles.sass",
+    "sass/fonts.sass"
+  ],
   "liveSassCompile.settings.excludeList": [".vscode/**"],
   "liveSassCompile.settings.generateMap": false,
   "liveSassCompile.settings.autoprefix": [
