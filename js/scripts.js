@@ -40,7 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const $notification = $delete.parentNode;
 
       $delete.addEventListener("click", () => {
-        $notification.parentNode.removeChild($notification);
+        $notification.classList.remove("animate__slideInUp");
+        $notification.classList.add("animate__slideOutDown");
+        setTimeout(() => {
+          $notification.parentNode.removeChild($notification);
+        }, 1000);
       });
     }
   );
