@@ -46,7 +46,11 @@
     >
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="images/logo.jpg" width="28" height="28" />
+          <span class="has-text-weight-semibold is-size-5">
+            <span class="has-text-black">Wiki</span
+            ><span class="has-text-danger">liQ</span></span
+          >&nbsp;
+          <span class="is-size-5">Ads Manager</span>
         </a>
 
         <a
@@ -64,31 +68,78 @@
 
       <div id="top-navbar-menu" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item underlined"> Home </a>
-
-          <a class="navbar-item underlined"> Documentation </a>
-
-          <div class="navbar-item underlined has-dropdown is-hoverable">
-            <a class="navbar-link"> More </a>
-
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-item underlined"
+              ><span class="icon-text"
+                ><span class="icon"><i class="fa-regular fa-bell"></i></span
+                ><span>Notices</span>&nbsp;</span
+              ><span class="tag is-danger is-rounded">3</span>
+            </a>
             <div class="navbar-dropdown">
-              <a class="navbar-item"> About </a>
-              <a class="navbar-item"> Jobs </a>
-              <a class="navbar-item"> Contact </a>
+              <a class="navbar-item">1. Change your password </a>
+              <a class="navbar-item">2. Add payment method </a>
+              <a class="navbar-item">3. Confirm e-mail </a>
               <hr class="navbar-divider" />
-              <a class="navbar-item"> Report an issue </a>
+              <a class="navbar-item">Read all notices</a>
             </div>
           </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-item underlined"
+              ><span class="icon-text"
+                ><span class="icon"><i class="fa-solid fa-gear"></i></span
+                ><span>Preferences</span>&nbsp;</span
+              >
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">Account settings</a>
+              <a class="navbar-item">Payment methods</a>
+            </div>
+          </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-item underlined"
+              ><span class="icon-text"
+                ><span class="icon"
+                  ><i class="fa-regular fa-circle-question"></i></span
+                ><span>Help & support</span></span
+              >
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">Documentation</a>
+              <a class="navbar-item">FAQ</a>
+              <a class="navbar-item">Get support</a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">Terms & conditions</a>
+            </div>
+          </div>
+
+          <a class="navbar-item underlined"
+            ><span class="icon-text"
+              ><span class="icon"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i></span
+              ><span>Go to site</span></span
+            >
+          </a>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light"> Log in </a>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Search..." />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </p>
             </div>
+          </div>
+          <div class="navbar-item">
+            <button class="button is-light">
+              <span class="icon is-small"
+                ><i class="fa-solid fa-arrow-right-from-bracket"></i></span
+              ><span>Log out</span>
+            </button>
           </div>
         </div>
       </div>
@@ -101,7 +152,7 @@
               <span class="icon is-small"
                 ><i class="fa-regular fa-folder"></i
               ></span>
-              <span>Кампании</span>
+              <span>Campaigns</span>
             </a>
           </li>
           <li>
@@ -109,7 +160,7 @@
               <span class="icon is-small"
                 ><i class="fa-regular fa-rectangle-list"></i
               ></span>
-              <span>Группы объявлений</span>
+              <span>Ad sets</span>
             </a>
           </li>
           <li>
@@ -117,7 +168,7 @@
               <span class="icon is-small"
                 ><i class="fa-regular fa-note-sticky"></i
               ></span>
-              <span>Объявления</span>
+              <span>Ads</span>
             </a>
           </li>
         </ul>
