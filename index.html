@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.min.css" />
     <link rel="stylesheet" href="css/fonts.min.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/modal-fx.min.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -67,7 +68,10 @@
         </a>
       </div>
 
-      <div id="top-navbar-menu" class="navbar-menu">
+      <div
+        id="top-navbar-menu"
+        class="navbar-menu animate__animated animate__fadeIn"
+      >
         <div class="navbar-start">
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-item underlined"
@@ -123,7 +127,10 @@
             </div>
           </div>
 
-          <a class="navbar-item underlined"
+          <a
+            href="https://wikiliq.org/"
+            target="_blank"
+            class="navbar-item underlined"
             ><span class="icon-text"
               ><span class="icon"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i></span
@@ -205,7 +212,7 @@
         >
           <h2>Кампании</h2>
           <p>Содержимое для вкладки "Кампании" здесь.</p>
-          <button class="button">
+          <button class="button modal-button" data-target="add-campaign-modal">
             <span class="icon">
               <i class="fa-solid fa-plus"></i>
             </span>
@@ -269,8 +276,13 @@
     </div>
     <footer class="footer">
       <div class="content is-size-7 has-text-centered has-text-weight-normal">
-        <a href="https://wikiliq.org/us-privacy-policy/">Privacy Policy</a> |
-        <a href="https://wikiliq.org/terms-us/">Terms of Service</a>
+        <a href="https://wikiliq.org/us-privacy-policy/" target="_blank"
+          >Privacy Policy</a
+        >
+        |
+        <a href="https://wikiliq.org/terms-us/" target="_blank"
+          >Terms of Service</a
+        >
         <span
           ><a href="https://wikiliq.org"
             ><span class="has-text-white">Wiki</span
@@ -280,7 +292,41 @@
         <span> | All Rights Reserved 2023</span>
       </div>
     </footer>
+    <!-- Modals -->
+    <!-- Add new campaign modal with fx class "modal-fx-fadeInScale" -->
+    <div
+      id="add-campaign-modal"
+      class="modal modal-full-screen modal-fx-fadeInScale"
+    >
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Add new campaign</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae cum
+          enim quisquam ducimus, facilis, esse nesciunt porro, officiis totam
+          veniam libero! Nisi hic vel aspernatur doloremque enim ut blanditiis
+          perferendis, repudiandae assumenda quibusdam delectus quam eum non
+          maxime ullam quod qui ab in dolorem dolores vero amet! Perferendis
+          incidunt unde blanditiis harum vel velit, accusantium praesentium
+          autem ut voluptas, voluptatibus fugiat. Molestiae maiores aspernatur
+          expedita, magnam commodi suscipit explicabo labore temporibus tenetur
+          distinctio mollitia facere eum ad officia? Sit eaque culpa ea saepe
+          facilis. Consequatur, architecto. Optio eveniet cupiditate accusantium
+          vero consectetur, maiores eum culpa assumenda reprehenderit sequi aut
+          nihil!
+        </section>
+        <footer class="modal-card-foot">
+          <button class="modal-button-close button is-success">
+            Save changes
+          </button>
+          <button class="modal-button-close button">Cancel</button>
+        </footer>
+      </div>
+    </div>
     <!-- Scripts -->
-    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/modal-fx.js"></script>
   </body>
 </html>

@@ -9,6 +9,7 @@ $liq-blue: #0693e3
 $liq-purple: #9b51e0
 $liq-orange: #ff6900
 // Redeclaring
+$section-padding: .75rem
 $section-padding-desktop: 1.5rem .75rem
 $navbar-item-color: #000
 $navbar-item-hover-color: #000
@@ -93,9 +94,11 @@ a
 // Components
 .notification-area
 	position: fixed
-	max-width: 30vw
-	right: .75rem
 	bottom: 3rem
+	@include desktop
+		right: .75rem
+		max-width: 30vw
+
 .tabs:not(:last-child)
 	margin-bottom: 0
 .tab-content
@@ -119,7 +122,7 @@ a
 		position: absolute
 		height: 2px
 		width: 0
-		bottom: 1.25rem
+		top: calc(50% + 1rem)
 		left: 50%
 		background-color: $liq-red
 		transform: translateX(-50%)
