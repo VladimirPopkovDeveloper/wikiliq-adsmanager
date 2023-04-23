@@ -1,7 +1,19 @@
 {
+  "name": "wikiliq-adsmanager",
+  "version": "0.0.2",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel /index.html",
+    "build": "parcel build /index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  },
   "dependencies": {
     "animate.css": "^4.1.1",
     "bulma": "^0.9.4",
-    "bulma-modal-fx": "^1.1.1"
+    "bulma-modal-fx": "^1.1.1",
+    "@cubejs-client/core": "^0.31.0",
+    "chart.js": "^4.2.1"
   }
 }

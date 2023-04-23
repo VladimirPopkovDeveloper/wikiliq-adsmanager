@@ -141,6 +141,16 @@
 
         <div class="navbar-end">
           <div class="navbar-item">
+            Your wallet:&nbsp;<span class="has-text-danger">$123.35</span>
+          </div>
+          <div class="navbar-item">
+            <button class="button is-light is-success">
+              <span class="icon is-small"
+                ><i class="fa-regular fa-credit-card"></i></span
+              ><span>Add funds</span>
+            </button>
+          </div>
+          <div class="navbar-item">
             <div class="field">
               <p class="control has-icons-left">
                 <input class="input" type="password" placeholder="Search..." />
@@ -150,8 +160,9 @@
               </p>
             </div>
           </div>
+
           <div class="navbar-item">
-            <button class="button is-light">
+            <button class="button is-light is-danger">
               <span class="icon is-small"
                 ><i class="fa-solid fa-arrow-right-from-bracket"></i></span
               ><span>Log out</span>
@@ -210,8 +221,143 @@
           id="tab-0"
           class="tab-content-box is-active animate__animated animate__fadeIn"
         >
-          <h2>Кампании</h2>
-          <p>Содержимое для вкладки "Кампании" здесь.</p>
+          <!-- Campaigns -->
+          <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <!-- Headers & footers -->
+              <thead>
+                <tr>
+                  <th>Select</th>
+                  <th>Start/stop</th>
+                  <th>Campaign name</th>
+                  <th>Status</th>
+                  <th>Daily budget</th>
+                  <th>Total budget</th>
+                  <th>Spent</th>
+                  <th>Shows</th>
+                  <th>Clicks</th>
+                  <th>CTR</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <!-- Campaings data -->
+              <tbody>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-warning is-light"
+                    >
+                      <span class="icon"
+                        ><i class="fa-solid fa-pause"></i
+                      ></span>
+                    </button>
+                  </td>
+                  <td>Bourbouns</td>
+                  <td>running</td>
+                  <td>12.5</td>
+                  <td>150</td>
+                  <td>64.5</td>
+                  <td>36</td>
+                  <td>28</td>
+                  <td>77.7%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Beers</td>
+                  <td>paused</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>42</td>
+                  <td>15</td>
+                  <td>10</td>
+                  <td>66.6%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Wines</td>
+                  <td>paused</td>
+                  <td>20</td>
+                  <td>125</td>
+                  <td>84.3</td>
+                  <td>44</td>
+                  <td>22</td>
+                  <td>50%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <button class="button modal-button" data-target="add-campaign-modal">
             <span class="icon">
               <i class="fa-solid fa-plus"></i>
@@ -223,8 +369,263 @@
           id="tab-1"
           class="tab-content-box animate__animated animate__fadeIn"
         >
-          <h2>Группы объявлений</h2>
-          <p>Содержимое для вкладки "Группы объявлений" здесь.</p>
+          <!-- Ad sets -->
+          <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <!-- Header & footers -->
+              <thead>
+                <tr>
+                  <th>Select</th>
+                  <th>Start/stop</th>
+                  <th>Ad set name</th>
+                  <th>Campaign name</th>
+                  <th>Status</th>
+                  <th>Daily budget</th>
+                  <th>Total budget</th>
+                  <th>Spent</th>
+                  <th>Shows</th>
+                  <th>Clicks</th>
+                  <th>CTR</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <!-- Ad sets data -->
+              <tbody>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-warning is-light"
+                    >
+                      <span class="icon"
+                        ><i class="fa-solid fa-pause"></i
+                      ></span>
+                    </button>
+                  </td>
+                  <td>Jack Daniel’s</td>
+                  <td>Bourbouns</td>
+                  <td>running</td>
+                  <td>12.5</td>
+                  <td>150</td>
+                  <td>64.5</td>
+                  <td>36</td>
+                  <td>28</td>
+                  <td>77.7%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-warning is-light"
+                    >
+                      <span class="icon"
+                        ><i class="fa-solid fa-pause"></i
+                      ></span>
+                    </button>
+                  </td>
+                  <td>Jim Beam</td>
+                  <td>Bourbouns</td>
+                  <td>running</td>
+                  <td>12.5</td>
+                  <td>150</td>
+                  <td>64.5</td>
+                  <td>36</td>
+                  <td>28</td>
+                  <td>77.7%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Miller</td>
+                  <td>Beers</td>
+                  <td>paused</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>42</td>
+                  <td>15</td>
+                  <td>10</td>
+                  <td>66.6%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Paulaner Oktoberfest</td>
+                  <td>Beers</td>
+                  <td>paused</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>42</td>
+                  <td>15</td>
+                  <td>10</td>
+                  <td>66.6%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Black Box Merlot</td>
+                  <td>Wines</td>
+                  <td>paused</td>
+                  <td>20</td>
+                  <td>125</td>
+                  <td>84.3</td>
+                  <td>44</td>
+                  <td>22</td>
+                  <td>50%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Josh Cellars</td>
+                  <td>Wines</td>
+                  <td>paused</td>
+                  <td>20</td>
+                  <td>125</td>
+                  <td>84.3</td>
+                  <td>44</td>
+                  <td>22</td>
+                  <td>50%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <button class="button">
             <span class="icon">
               <i class="fa-solid fa-plus"></i>
@@ -236,8 +637,508 @@
           id="tab-2"
           class="tab-content-box animate__animated animate__fadeIn"
         >
-          <h2>Объявления</h2>
-          <p>Содержимое для вкладки "Объявления" здесь.</p>
+          <!-- Ads -->
+          <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <!-- Header & footers -->
+              <thead>
+                <tr>
+                  <th>Select</th>
+                  <th>Start/stop</th>
+                  <th>Ad name</th>
+                  <th>Ad set name</th>
+                  <th>Campaign name</th>
+                  <th>Status</th>
+                  <th>Daily budget</th>
+                  <th>Total budget</th>
+                  <th>Spent</th>
+                  <th>Shows</th>
+                  <th>Clicks</th>
+                  <th>CTR</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <!-- Ads data -->
+              <tbody>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-warning is-light"
+                    >
+                      <span class="icon"
+                        ><i class="fa-solid fa-pause"></i
+                      ></span>
+                    </button>
+                  </td>
+                  <td>Jack Daniel’s Old No. 7 Tennessee Whiskey</td>
+                  <td>Jack Daniel’s</td>
+                  <td>Bourbouns</td>
+                  <td>running</td>
+                  <td>12.5</td>
+                  <td>150</td>
+                  <td>64.5</td>
+                  <td>36</td>
+                  <td>28</td>
+                  <td>77.7%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-warning is-light"
+                    >
+                      <span class="icon"
+                        ><i class="fa-solid fa-pause"></i
+                      ></span>
+                    </button>
+                  </td>
+                  <td>Jim Beam Bourbon Whiskey</td>
+                  <td>Jim Beam</td>
+                  <td>Bourbouns</td>
+                  <td>running</td>
+                  <td>12.5</td>
+                  <td>150</td>
+                  <td>64.5</td>
+                  <td>36</td>
+                  <td>28</td>
+                  <td>77.7%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-warning is-light"
+                    >
+                      <span class="icon"
+                        ><i class="fa-solid fa-pause"></i
+                      ></span>
+                    </button>
+                  </td>
+                  <td>Jack Daniel’s Old No. 7 Tennessee Whiskey</td>
+                  <td>Jack Daniel’s</td>
+                  <td>Bourbouns</td>
+                  <td>running</td>
+                  <td>12.5</td>
+                  <td>150</td>
+                  <td>64.5</td>
+                  <td>36</td>
+                  <td>28</td>
+                  <td>77.7%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-warning is-light"
+                    >
+                      <span class="icon"
+                        ><i class="fa-solid fa-pause"></i
+                      ></span>
+                    </button>
+                  </td>
+                  <td>Jim Beam Bourbon Whiskey</td>
+                  <td>Jim Beam</td>
+                  <td>Bourbouns</td>
+                  <td>running</td>
+                  <td>12.5</td>
+                  <td>150</td>
+                  <td>64.5</td>
+                  <td>36</td>
+                  <td>28</td>
+                  <td>77.7%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Miller Lite Lager Beer</td>
+                  <td>Miller</td>
+                  <td>Beers</td>
+                  <td>paused</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>42</td>
+                  <td>15</td>
+                  <td>10</td>
+                  <td>66.6%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Paulaner Oktoberfest Bier 6%</td>
+                  <td>Paulaner Oktoberfest</td>
+                  <td>Beers</td>
+                  <td>paused</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>42</td>
+                  <td>15</td>
+                  <td>10</td>
+                  <td>66.6%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Miller Lite Lager Beer</td>
+                  <td>Miller</td>
+                  <td>Beers</td>
+                  <td>paused</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>42</td>
+                  <td>15</td>
+                  <td>10</td>
+                  <td>66.6%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Paulaner Oktoberfest Bier 6%</td>
+                  <td>Paulaner Oktoberfest</td>
+                  <td>Beers</td>
+                  <td>paused</td>
+                  <td>8</td>
+                  <td>80</td>
+                  <td>42</td>
+                  <td>15</td>
+                  <td>10</td>
+                  <td>66.6%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Black Box Merlot 14%</td>
+                  <td>Black Box Merlot</td>
+                  <td>Wines</td>
+                  <td>paused</td>
+                  <td>20</td>
+                  <td>125</td>
+                  <td>84.3</td>
+                  <td>44</td>
+                  <td>22</td>
+                  <td>50%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Cabernet Sauvignon</td>
+                  <td>Josh Cellars</td>
+                  <td>Wines</td>
+                  <td>paused</td>
+                  <td>20</td>
+                  <td>125</td>
+                  <td>84.3</td>
+                  <td>44</td>
+                  <td>22</td>
+                  <td>50%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Black Box Merlot 14%</td>
+                  <td>Black Box Merlot</td>
+                  <td>Wines</td>
+                  <td>paused</td>
+                  <td>20</td>
+                  <td>125</td>
+                  <td>84.3</td>
+                  <td>44</td>
+                  <td>22</td>
+                  <td>50%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <td>
+                    <button
+                      class="button is-small is-rounded is-success is-light"
+                    >
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                  </td>
+                  <td>Cabernet Sauvignon</td>
+                  <td>Josh Cellars</td>
+                  <td>Wines</td>
+                  <td>paused</td>
+                  <td>20</td>
+                  <td>125</td>
+                  <td>84.3</td>
+                  <td>44</td>
+                  <td>22</td>
+                  <td>50%</td>
+                  <td>
+                    <div class="buttons has-addons">
+                      <div class="button is-small is-info is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-gear"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-warning is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-clone"></i
+                        ></span>
+                      </div>
+                      <div class="button is-small is-danger is-light">
+                        <span class="icon is-small"
+                          ><i class="fa-solid fa-file-zipper"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <button class="button">
             <span class="icon">
               <i class="fa-solid fa-plus"></i>
@@ -250,7 +1151,7 @@
           class="tab-content-box animate__animated animate__fadeIn"
         >
           <h2>Статистика</h2>
-          <p>Содержимое для вкладки "Объявления" здесь.</p>
+          <div style="width: 800px"><canvas id="acquisitions"></canvas></div>
         </div>
         <div
           id="tab-4"
@@ -328,5 +1229,6 @@
     <!-- Scripts -->
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/modal-fx.js"></script>
+    <script type="module" src="js/charts.js"></script>
   </body>
 </html>
