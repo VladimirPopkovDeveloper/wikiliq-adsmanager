@@ -1,4 +1,4 @@
-import Chart from "../node_modules/chart.js/dist/chart.umd";
+import Chart from "../js/chart.umd";
 
 (async function () {
   const data = [
