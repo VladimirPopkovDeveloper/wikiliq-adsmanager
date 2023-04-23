@@ -626,7 +626,7 @@
               </tbody>
             </table>
           </div>
-          <button class="button">
+          <button class="button modal-button" data-target="add-adset-modal">
             <span class="icon">
               <i class="fa-solid fa-plus"></i>
             </span>
@@ -1139,7 +1139,7 @@
               </tbody>
             </table>
           </div>
-          <button class="button">
+          <button class="button modal-button" data-target="add-ad-modal">
             <span class="icon">
               <i class="fa-solid fa-plus"></i>
             </span>
@@ -1150,8 +1150,12 @@
           id="tab-3"
           class="tab-content-box animate__animated animate__fadeIn"
         >
-          <h2>Статистика</h2>
-          <div style="width: 800px"><canvas id="acquisitions"></canvas></div>
+          <h2>Some statistics graphs...</h2>
+          <div class="columns">
+            <div class="column is-4"><canvas id="chart-1"></canvas></div>
+            <div class="column is-4"><canvas id="chart-2"></canvas></div>
+            <div class="column is-4"><canvas id="chart-3"></canvas></div>
+          </div>
         </div>
         <div
           id="tab-4"
@@ -1202,6 +1206,67 @@
       <div class="modal-content modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">Add new campaign</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae cum
+          enim quisquam ducimus, facilis, esse nesciunt porro, officiis totam
+          veniam libero! Nisi hic vel aspernatur doloremque enim ut blanditiis
+          perferendis, repudiandae assumenda quibusdam delectus quam eum non
+          maxime ullam quod qui ab in dolorem dolores vero amet! Perferendis
+          incidunt unde blanditiis harum vel velit, accusantium praesentium
+          autem ut voluptas, voluptatibus fugiat. Molestiae maiores aspernatur
+          expedita, magnam commodi suscipit explicabo labore temporibus tenetur
+          distinctio mollitia facere eum ad officia? Sit eaque culpa ea saepe
+          facilis. Consequatur, architecto. Optio eveniet cupiditate accusantium
+          vero consectetur, maiores eum culpa assumenda reprehenderit sequi aut
+          nihil!
+        </section>
+        <footer class="modal-card-foot">
+          <button class="modal-button-close button is-success">
+            Save changes
+          </button>
+          <button class="modal-button-close button">Cancel</button>
+        </footer>
+      </div>
+    </div>
+    <!-- Add new Ad set modal with fx class "modal-fx-fadeInScale" -->
+    <div
+      id="add-adset-modal"
+      class="modal modal-full-screen modal-fx-fadeInScale"
+    >
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Add new advertisment set</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae cum
+          enim quisquam ducimus, facilis, esse nesciunt porro, officiis totam
+          veniam libero! Nisi hic vel aspernatur doloremque enim ut blanditiis
+          perferendis, repudiandae assumenda quibusdam delectus quam eum non
+          maxime ullam quod qui ab in dolorem dolores vero amet! Perferendis
+          incidunt unde blanditiis harum vel velit, accusantium praesentium
+          autem ut voluptas, voluptatibus fugiat. Molestiae maiores aspernatur
+          expedita, magnam commodi suscipit explicabo labore temporibus tenetur
+          distinctio mollitia facere eum ad officia? Sit eaque culpa ea saepe
+          facilis. Consequatur, architecto. Optio eveniet cupiditate accusantium
+          vero consectetur, maiores eum culpa assumenda reprehenderit sequi aut
+          nihil!
+        </section>
+        <footer class="modal-card-foot">
+          <button class="modal-button-close button is-success">
+            Save changes
+          </button>
+          <button class="modal-button-close button">Cancel</button>
+        </footer>
+      </div>
+    </div>
+    <!-- Add new ad modal with fx class "modal-fx-fadeInScale" -->
+    <div id="add-ad-modal" class="modal modal-full-screen modal-fx-fadeInScale">
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Add new advertisment</p>
           <button class="modal-button-close delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
