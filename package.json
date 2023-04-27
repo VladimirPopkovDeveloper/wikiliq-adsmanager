@@ -1,10 +1,15 @@
 {
   "name": "wikiliq-adsmanager",
   "version": "0.0.2",
+  "description": "FrontEnd draft for WikiLiq.org",
   "license": "MIT",
   "dependencies": {
+    "alpinejs": "^3.12.0",
     "animate.css": "^4.1.1",
     "bulma": "^0.9.4",
     "bulma-modal-fx": "^1.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
