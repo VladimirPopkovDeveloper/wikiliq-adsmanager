@@ -74,7 +74,7 @@ function startwatch() {
   // Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
   watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
   // Мониторим файлы препроцессора на изменения
-  watch("src/**/sass/**/*", styles);
+  watch("src/sass/*", styles);
   // Мониторим файлы HTML на изменения
   watch("./*.html").on("change", browserSync.reload);
 }
