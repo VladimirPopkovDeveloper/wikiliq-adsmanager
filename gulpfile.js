@@ -8,6 +8,9 @@ const { src, dest, parallel, series, watch } = require("gulp");
 const browserSync = require("browser-sync").create();
 
 // Подключаем gulp-concat
+const clean = require("gulp-clean");
+
+// Подключаем gulp-concat
 const concat = require("gulp-concat");
 
 // Подключаем gulp-uglify-es
@@ -37,7 +40,7 @@ function browsersync() {
 function scripts() {
   return src([
     // Берем файлы из источников
-    "node_modules/alpinejs/dist/cdn.min.js", // Alpine JS
+    "node_modules/alpinejs/dist/cdn.js", // Alpine JS
     "src/js/modal-fx.js", // Modified Bulma Modal FX
     "src/js/scripts.js", // Project custom JS
   ])
@@ -53,7 +56,7 @@ function styles() {
     "src/" + preprocessor + "/styles." + preprocessor + "",
     "node_modules/animate.css/animate.css",
     "node_modules/bulma-modal-fx/dist/css/modal-fx.css",
-  ]) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
+  ]) // Выбираем источник: "src/sass/styles.sass" или "src/less/styles.less"
     .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
     .pipe(concat("styles.min.css")) // Конкатенируем в файл app.min.js
     .pipe(
@@ -64,10 +67,11 @@ function styles() {
         level: { 1: { specialComments: 0 } } /* , format: 'beautify' */,
       })
     ) // Минифицируем стили
-    .pipe(dest("css/")) // Выгрузим результат в папку "app/css/"
+    .pipe(dest("css/")) // Выгрузим результат в папку "css/"
     .pipe(browserSync.stream()); // Сделаем инъекцию в браузер
 }
 
+// Слежение
 function startwatch() {
   // Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
   watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
@@ -76,6 +80,27 @@ function startwatch() {
   // Мониторим файлы HTML на изменения
   watch("./*.html").on("change", browserSync.reload);
 }
+
+// Сборка
+function buildcopy() {
+  return src(
+    [
+      // Выбираем нужные файлы
+      "css/**/*.min.css",
+      "js/**/*.min.js",
+      "*.html",
+    ],
+    { base: "./" }
+  ) // Параметр "base" сохраняет структуру проекта при копировании
+    .pipe(dest("dist")); // Выгружаем в папку с финальной сборкой
+}
+
+function cleandist() {
+  return src("dist", { allowEmpty: true }).pipe(clean()); // Удаляем папку "dist/"
+}
+
+// Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
+exports.cleandist = cleandist;
 
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
 exports.browsersync = browsersync;
@@ -88,3 +113,6 @@ exports.styles = styles;
 
 // Экспортируем дефолтный таск с нужным набором функций
 exports.default = parallel(styles, scripts, browsersync, startwatch);
+
+// Создаем новый таск "build", который последовательно выполняет нужные операции
+exports.build = series(cleandist, styles, scripts, buildcopy);
