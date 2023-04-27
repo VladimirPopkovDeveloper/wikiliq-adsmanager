@@ -53,10 +53,10 @@ function scripts() {
 // Обрабатываем стили
 function styles() {
   return src([
-    "src/" + preprocessor + "/styles." + preprocessor + "",
-    "node_modules/animate.css/animate.css",
-    "node_modules/bulma-modal-fx/dist/css/modal-fx.css",
-  ]) // Выбираем источник: "src/sass/styles.sass" или "src/less/styles.less"
+    "src/" + preprocessor + "/styles." + preprocessor + "", // Выбираем источник: "src/sass/styles.sass" или "src/less/styles.less"
+    "node_modules/animate.css/animate.css", // Animate.css
+    "node_modules/bulma-modal-fx/dist/css/modal-fx.css", // Bulma Modal FX
+  ])
     .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
     .pipe(concat("styles.min.css")) // Конкатенируем в файл app.min.js
     .pipe(
@@ -100,7 +100,7 @@ function cleandist() {
   return src("dist", { allowEmpty: true }).pipe(clean()); // Удаляем папку "dist/"
 }
 
-// Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
+// Очищаем папку dist
 exports.cleandist = cleandist;
 
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
