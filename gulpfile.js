@@ -1,6 +1,3 @@
-// Определяем переменную "preprocessor"
-let preprocessor = "sass"; // Выбор препроцессора в проекте - sass или less
-
 // Определяем константы Gulp
 const { src, dest, parallel, series, watch } = require("gulp");
 
@@ -53,11 +50,12 @@ function scripts() {
 // Обрабатываем стили
 function styles() {
   return src([
-    "src/" + preprocessor + "/styles." + preprocessor + "", // Выбираем источник: "src/sass/styles.sass" или "src/less/styles.less"
+    "src/sass/fonts.sass", // Выбираем источник: "src/sass/fonts.sass"
+    "src/sass/styles.sass", // Выбираем источник: "src/sass/styles.sass"
     "node_modules/animate.css/animate.css", // Animate.css
     "node_modules/bulma-modal-fx/dist/css/modal-fx.css", // Bulma Modal FX
   ])
-    .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
+    .pipe(sass()) // Компилируем sass в css
     .pipe(concat("styles.min.css")) // Конкатенируем в файл app.min.js
     .pipe(
       autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true })
@@ -76,7 +74,7 @@ function startwatch() {
   // Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
   watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
   // Мониторим файлы препроцессора на изменения
-  watch("src/**/" + preprocessor + "/**/*", styles);
+  watch("src/**/sass/**/*", styles);
   // Мониторим файлы HTML на изменения
   watch("./*.html").on("change", browserSync.reload);
 }
