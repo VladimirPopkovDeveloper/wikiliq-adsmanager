@@ -49,7 +49,11 @@ function scripts() {
 
 // Обрабатываем стили
 function styles() {
-  return src("src/" + preprocessor + "/styles." + preprocessor + "") // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
+  return src([
+    "src/" + preprocessor + "/styles." + preprocessor + "",
+    "node_modules/animate.css/animate.css",
+    "node_modules/bulma-modal-fx/dist/css/modal-fx.css",
+  ]) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
     .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
     .pipe(concat("styles.min.css")) // Конкатенируем в файл app.min.js
     .pipe(
@@ -67,6 +71,10 @@ function styles() {
 function startwatch() {
   // Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
   watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
+  // Мониторим файлы препроцессора на изменения
+  watch("src/**/" + preprocessor + "/**/*", styles);
+  // Мониторим файлы HTML на изменения
+  watch("./*.html").on("change", browserSync.reload);
 }
 
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
@@ -79,4 +87,4 @@ exports.scripts = scripts;
 exports.styles = styles;
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(scripts, browsersync, startwatch);
+exports.default = parallel(styles, scripts, browsersync, startwatch);
