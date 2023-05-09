@@ -32,6 +32,26 @@ tabs.forEach((tab, index) => {
   });
 });
 
+// Bottom menu & main content
+const bottom_links = document.querySelectorAll(".bottom-navbar .bottom-link");
+const mainContentSections = document.querySelectorAll(
+  ".main-content .main-content-section"
+);
+
+bottom_links.forEach((bottom_link, index) => {
+  bottom_link.addEventListener("click", () => {
+    bottom_links.forEach((bottom_link) =>
+      bottom_link.classList.remove("is-active")
+    );
+    mainContentSections.forEach((section) =>
+      section.classList.remove("is-active")
+    );
+
+    bottom_link.classList.add("is-active");
+    mainContentSections[index].classList.add("is-active");
+  });
+});
+
 // Notifications
 document.addEventListener("DOMContentLoaded", () => {
   (document.querySelectorAll(".notification .delete") || []).forEach(

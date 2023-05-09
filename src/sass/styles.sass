@@ -9,6 +9,7 @@ $liq-blue: #0693e3
 $liq-purple: #9b51e0
 $liq-orange: #ff6900
 // Redeclaring
+$body-background-color: #fafafa
 $section-padding: .75rem
 $section-padding-desktop: 1.5rem .75rem
 $navbar-item-color: #000
@@ -31,6 +32,11 @@ $primary: $liq-teal
 $warning: $liq-yellow
 $danger: $liq-red
 $link: $liq-blue
+$title-size: 1.25rem
+$title-weight: 400
+$subtitle-size: 1rem
+$subtitle-weight: 200
+
 // Base
 @import "../../node_modules/bulma/bulma.sass"
 // Shadows
@@ -50,24 +56,10 @@ $link: $liq-blue
 // Mixins
 =transition
 	transition: all .3s ease
-=section-padding-0
-	padding: 0
-=section-padding-1
-	padding: 3rem
-=section-padding-2
-	padding: 1.5rem
-=section-header-yellow
-	h2
-		width: 50%
-		padding: 2rem 3rem
-		//margin-left: -3rem
-		color: $white
-		background-color: $perehod-yellow
+
 // Base tags
 body
 	font-family: 'Roboto', sans-serif
-	background-color: #fafafa
-	min-height: calc(100vh - $navbar-height)
 h1, h2, h3, h4, h5, h6
 	font-weight: 400
 h2
@@ -75,13 +67,27 @@ h2
 h3
 	font-size: $size-4
 p
-	margin-bottom: 1.25rem
-	font-family: 'Tinos', serif
 	font-size: 1.25rem
-	&:last-of-type
-		margin-bottom: 0
 a
 	+transition
+
+// Navbars
+.bottom-navbar
+	background-color: $white
+	border-top: 1px solid #eaeaea
+	padding: 1.5rem .75rem
+	position: fixed
+	z-index: 10
+	width: 100%
+	bottom: 0
+.bottom-link
+	color: $black-ter
+	&:hover
+		color: $liq-red
+	&.is-active
+		color: $liq-red
+
+// 
 // Sections
 .footer
 	position: fixed
@@ -92,9 +98,24 @@ a
 	&:hover
 		color: $liq-red
 // Components
+.main-content-section
+	display: none
+.main-content-section.is-active
+	display: block
+
+.tile-icon
+	color: $grey
+	margin: 2rem .75rem
+.tile.is-child
+	cursor: pointer
+	&:hover
+		.tile-icon
+			+transition
+			transform: scale(1.1)
 .notification-area
 	position: fixed
-	bottom: 3rem
+	z-index: 5
+	bottom: 5.25rem
 	@include desktop
 		right: .75rem
 		max-width: 30vw
