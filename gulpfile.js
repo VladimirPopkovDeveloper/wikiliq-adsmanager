@@ -88,6 +88,7 @@ function buildcopy() {
       // Выбираем нужные файлы
       "css/**/*.min.css",
       "js/**/*.min.js",
+      "images/**",
       "fonts/**",
       "*.html",
     ],
