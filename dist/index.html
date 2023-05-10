@@ -165,7 +165,10 @@
       >
         <div class="container">
           <div class="tile is-ancestor">
-            <div class="tile is-parent is-6">
+            <div
+              class="tile is-parent is-6 modal-button"
+              data-target="add-ad-modal"
+            >
               <div class="tile is-child box has-text-centered">
                 <span class="icon tile-icon">
                   <i class="fa-regular fa-file fa-3x"></i>
@@ -174,10 +177,13 @@
                 <p class="subtitle">make promoted product</p>
               </div>
             </div>
-            <div class="tile is-parent is-6">
+            <div
+              class="tile is-parent is-6 modal-button"
+              data-target="edit-brand-modal"
+            >
               <div class="tile is-child box has-text-centered">
                 <span class="icon tile-icon">
-                  <i class="fa-regular fa-copyright fa-3x"></i></i>
+                  <i class="fa-regular fa-copyright fa-3x"></i>
                 </span>
                 <p class="title">Edit your brand</p>
                 <p class="subtitle">tell us about you</p>
@@ -185,7 +191,10 @@
             </div>
           </div>
           <div class="tile is-ancestor">
-            <div class="tile is-parent is-6">
+            <div
+              class="tile is-parent is-6 modal-button"
+              data-target="add-product-modal"
+            >
               <div class="tile is-child box has-text-centered">
                 <span class="icon tile-icon">
                   <i class="fa-solid fa-bottle-droplet fa-3x"></i>
@@ -194,7 +203,10 @@
                 <p class="subtitle">fill up your bottles!</p>
               </div>
             </div>
-            <div class="tile is-parent is-6">
+            <div
+              class="tile is-parent is-6 modal-button"
+              data-target="help-modal"
+            >
               <div class="tile is-child box has-text-centered">
                 <span class="icon tile-icon">
                   <i class="fa-solid fa-headset fa-3x"></i>
@@ -268,6 +280,201 @@
         <br />
         We're excited to have you on board. Get ready to reach your target
         audience and grow your business with us!
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add new ad modal -->
+    <div id="add-ad-modal" class="modal modal-full-screen modal-fx-fadeInScale">
+      <div class="modal-background"></div>
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Add new advertisment</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div
+            class="container modal-screen-container animate__animated animate__fadeIn"
+          >
+            <p class="title has-text-centered">
+              Choose your advertisement position:
+            </p>
+            <div class="columns is-multiline">
+              <div class="column is-6">
+                <p class="subtitle has-text-centered">On the Main page:</p>
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/mainpage-ad.png"
+                    alt="mainpage-ad"
+                  />
+                </figure>
+              </div>
+              <div class="column is-6">
+                <p class="subtitle has-text-centered">On the Trending page:</p>
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/trending-ad.png"
+                    alt="trending-ad"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div
+            class="container modal-screen-container animate__animated animate__fadeIn"
+          >
+            <p class="title has-text-centered">
+              Choose your advertisement dates:
+            </p>
+            <div class="columns">
+              <div class="column is-6-desktop is-offset-3-desktop is-12-mobile">
+                <form action="">
+                  <div class="field is-horizontal">
+                    <div class="field-label is-medium">
+                      <label class="label">Start from:</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control">
+                          <input
+                            class="input is-medium"
+                            type="date"
+                            data-display-mode="inline"
+                            data-is-range="true"
+                            data-close-on-select="false"
+                          />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-medium">
+                      <label class="label">Show by:</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control">
+                          <input
+                            class="input is-medium"
+                            type="date"
+                            data-display-mode="inline"
+                            data-is-range="true"
+                            data-close-on-select="false"
+                          />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            class="container modal-screen-container animate__animated animate__fadeIn"
+          >
+            <p class="title has-text-centered">
+              Choose your product to promote:
+            </p>
+            <div class="columns is-mobile is-multiline">
+              <div
+                class="column is-2-desktop is-4-tablet is-6-mobile has-text-centered"
+              >
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/La-Marca-Prosecco-1.jpeg"
+                  />
+                </figure>
+                <p>
+                  <strong>La Marca Prosecco</strong>
+                </p>
+              </div>
+              <div
+                class="column is-2-desktop is-4-tablet is-6-mobile has-text-centered"
+              >
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/Kim-Crawford-Sauvignon-Blanc.jpeg"
+                  />
+                </figure>
+                <p>
+                  <strong>Kim Crawford Sauvignon Blanc</strong>
+                </p>
+              </div>
+              <div
+                class="column is-2-desktop is-4-tablet is-6-mobile has-text-centered"
+              >
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/Josh-Cellars-Cabernet-Sauvignon.jpeg"
+                  />
+                </figure>
+                <p>
+                  <strong>Josh Cellars Cabernet Sauvignon</strong>
+                </p>
+              </div>
+              <div
+                class="column is-2-desktop is-4-tablet is-6-mobile has-text-centered"
+              >
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/Meiomi-Pinot-Noir.jpeg"
+                  />
+                </figure>
+                <p>
+                  <strong>Meiomi Pinot Noir</strong>
+                </p>
+              </div>
+              <div
+                class="column is-2-desktop is-4-tablet is-6-mobile has-text-centered"
+              >
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/Bota-Box-Cabernet-Sauvignon.jpeg"
+                  />
+                </figure>
+                <p>
+                  <strong>Bota Box Cabernet Sauvignon</strong>
+                </p>
+              </div>
+              <div
+                class="column is-2-desktop is-4-tablet is-6-mobile has-text-centered"
+              >
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/Santa-Margherita-Pinot-Grigio-DOC.jpeg"
+                  />
+                </figure>
+                <p>
+                  <strong>Santa Margherita Pinot Grigio DOC</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <div class="buttons prev-next-buttons">
+            <button class="modal-button button">
+              <span class="icon">
+                <i class="fa-solid fa-chevron-left"></i> </span
+              ><span>Prev</span>
+            </button>
+            <button class="modal-button button">
+              <span>Next</span
+              ><span class="icon">
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+            </button>
+          </div>
+        </footer>
       </div>
     </div>
     <!-- Scripts -->
