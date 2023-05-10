@@ -37,7 +37,8 @@ function browsersync() {
 function scripts() {
   return src([
     // Берем файлы из источников
-    "node_modules/alpinejs/dist/cdn.js", // Alpine JS
+    //"node_modules/alpinejs/dist/cdn.js", // Alpine JS
+    "node_modules/bulma-calendar/dist/js/bulma-calendar.js", // Bulma Calendar JS
     "src/js/modal-fx.js", // Modified Bulma Modal FX
     "src/js/scripts.js", // Project custom JS
   ])
@@ -54,6 +55,7 @@ function styles() {
     "src/sass/styles.sass", // Выбираем источник: "src/sass/styles.sass"
     "node_modules/animate.css/animate.css", // Animate.css
     "node_modules/bulma-modal-fx/dist/css/modal-fx.css", // Bulma Modal FX
+    "node_modules/bulma-calendar/dist/css/bulma-calendar.css", // Bulma Calendar CSS
   ])
     .pipe(sass()) // Компилируем sass в css
     .pipe(concat("styles.min.css")) // Конкатенируем в файл app.min.js

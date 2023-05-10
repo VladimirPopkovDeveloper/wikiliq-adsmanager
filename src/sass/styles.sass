@@ -102,6 +102,13 @@ a
 	display: none
 .main-content-section.is-active
 	display: block
+.button-image
+	padding: .75rem
+	cursor: pointer
+	border: 2px solid $white
+	border-radius: .5rem
+	&:hover
+		border: 2px solid $grey-light
 
 .tile-icon
 	color: $grey
@@ -151,3 +158,9 @@ a
 	&:hover::before
 		width: calc(100% - 1.5rem)
 		transform: translateX(-50%)
+// Modals
+.modal-screen-container
+	+transition
+	display: none
+.modal-screen-container.is-active
+	display: block

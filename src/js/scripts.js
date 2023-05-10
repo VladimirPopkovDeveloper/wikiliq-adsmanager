@@ -68,3 +68,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+
+// Prev & Next
+const prevButton = document.querySelector(
+  ".prev-next-buttons .modal-button:first-of-type"
+);
+const nextButton = document.querySelector(
+  ".prev-next-buttons .modal-button:last-of-type"
+);
+const modalScreenContainers = document.querySelectorAll(
+  ".modal-screen-container"
+);
+
+let activeScreenContainerIndex = 0;
+prevButton.style.display = "none";
+modalScreenContainers[activeScreenContainerIndex].classList.add("is-active");
+
+prevButton.addEventListener("click", () => {
+  if (activeScreenContainerIndex > 0) {
+    modalScreenContainers[activeScreenContainerIndex].classList.remove(
+      "is-active"
+    );
+    activeScreenContainerIndex--;
+    modalScreenContainers[activeScreenContainerIndex].classList.add(
+      "is-active"
+    );
+    if (activeScreenContainerIndex === 0) {
+      prevButton.style.display = "none";
+    }
+    nextButton.style.display = "block";
+  }
+});
+
+nextButton.addEventListener("click", () => {
+  if (activeScreenContainerIndex < modalScreenContainers.length - 1) {
+    modalScreenContainers[activeScreenContainerIndex].classList.remove(
+      "is-active"
+    );
+    activeScreenContainerIndex++;
+    modalScreenContainers[activeScreenContainerIndex].classList.add(
+      "is-active"
+    );
+    if (activeScreenContainerIndex === modalScreenContainers.length - 1) {
+      nextButton.style.display = "none";
+    }
+    prevButton.style.display = "block";
+  }
+});
+
+// Calendar
+// Initialize all input of date type.
+const calendars = bulmaCalendar.attach('[type="date"]', options);
+
+// Loop on each calendar initialized
+calendars.forEach((calendar) => {
+  // Add listener to select event
+  calendar.on("select", (date) => {
+    console.log(date);
+  });
+});
+
+// To access to bulmaCalendar instance of an element
+const element = document.querySelector("#my-element");
+if (element) {
+  // bulmaCalendar instance is available as element.bulmaCalendar
+  element.bulmaCalendar.on("select", (datepicker) => {
+    console.log(datepicker.data.value());
+  });
+}
