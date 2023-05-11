@@ -100,8 +100,8 @@ a
 // Components
 .main-content-section
 	display: none
-.main-content-section.is-active
-	display: block
+	&.is-active
+		display: flex
 .button-image
 	padding: .75rem
 	cursor: pointer
@@ -109,6 +109,11 @@ a
 	border-radius: .5rem
 	&:hover
 		border: 2px solid $grey-light
+	&.is-active
+		border: 2px solid $liq-red
+.ad-image img
+	width: auto
+	max-height: 64px
 
 .tile-icon
 	color: $grey
@@ -162,5 +167,5 @@ a
 .modal-screen-container
 	+transition
 	display: none
-.modal-screen-container.is-active
-	display: block
+	&.is-active
+		display: block

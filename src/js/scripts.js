@@ -68,20 +68,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+// Active button images
+const buttonImages = document.querySelectorAll(".button-image");
+
+buttonImages.forEach((buttonImage) => {
+  buttonImage.addEventListener("click", () => {
+    buttonImages.forEach((otherButtonImage) => {
+      if (otherButtonImage !== buttonImage) {
+        otherButtonImage.classList.remove("is-active");
+      }
+    });
+    buttonImage.classList.add("is-active");
+  });
+});
 
 // Prev & Next
-const prevButton = document.querySelector(
-  ".prev-next-buttons .modal-button:first-of-type"
+const prevButton = document.querySelector(".prev-next-buttons .prev-button");
+const nextButton = document.querySelector(".prev-next-buttons .next-button");
+const finishButton = document.querySelector(
+  ".prev-next-buttons .finish-button"
 );
-const nextButton = document.querySelector(
-  ".prev-next-buttons .modal-button:last-of-type"
-);
+console.log(prevButton);
 const modalScreenContainers = document.querySelectorAll(
   ".modal-screen-container"
 );
 
 let activeScreenContainerIndex = 0;
 prevButton.style.display = "none";
+finishButton.style.display = "none";
 modalScreenContainers[activeScreenContainerIndex].classList.add("is-active");
 
 prevButton.addEventListener("click", () => {
@@ -95,8 +109,10 @@ prevButton.addEventListener("click", () => {
     );
     if (activeScreenContainerIndex === 0) {
       prevButton.style.display = "none";
+      finishButton.style.display = "none";
     }
     nextButton.style.display = "block";
+    finishButton.style.display = "none";
   }
 });
 
@@ -111,6 +127,7 @@ nextButton.addEventListener("click", () => {
     );
     if (activeScreenContainerIndex === modalScreenContainers.length - 1) {
       nextButton.style.display = "none";
+      finishButton.style.display = "block";
     }
     prevButton.style.display = "block";
   }
