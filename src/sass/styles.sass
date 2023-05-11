@@ -130,6 +130,20 @@ a
 .product-image img
 	width: auto
 	max-height: 256px
+.image-loader
+	cursor: pointer
+	display: flex
+	justify-content: center
+	align-items: center
+	border: 1px solid $grey-light
+	border-radius: .5rem
+	height: 256px
+	width: 100%
+	&:hover
+		span
+			transform: scale(1.1)
+	span
+		+transition			
 
 .tile-icon
 	color: $grey
@@ -138,8 +152,9 @@ a
 	cursor: pointer
 	&:hover
 		.tile-icon
-			+transition
 			transform: scale(1.1)
+	.tile-icon
+		+transition
 .notification-area
 	position: fixed
 	z-index: 5

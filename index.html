@@ -959,6 +959,250 @@
         </footer>
       </div>
     </div>
+    <!-- Add new product modal -->
+    <div
+      id="add-product-modal"
+      class="modal modal-full-screen modal-fx-fadeInScale"
+    >
+      <div class="modal-background"></div>
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Add new product</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="container">
+            <div class="columns">
+              <div class="column is-2">
+                <div class="image-loader"><span>Drop image here</span></div>
+              </div>
+              <div class="column is-8">
+                <form>
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Name</label>
+                    </div>
+
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter name"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Brand</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter brand"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Tasting Notes</label>
+                    </div>
+
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter tasting notes"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">ABV</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="number"
+                            placeholder="Enter ABV"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Food Pairing</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter food pairing"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Suggested Glassware</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter suggested glassware"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Suggested Serving Temperature</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter suggested serving temperature"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Sweet-Dry Scale</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter sweet-dry scale"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Body</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter body"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Country</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option>Select country</option>
+                              <option>USA</option>
+                              <option>Canada</option>
+                              <option>France</option>
+                              <option>Italy</option>
+                              <option>Spain</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Categories</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <div class="select is-multiple is-fullwidth">
+                            <select multiple>
+                              <option>Red wine</option>
+                              <option>White wine</option>
+                              <option>Rose wine</option>
+                              <option>Sparkling wine</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Description</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control">
+                          <textarea
+                            class="textarea"
+                            placeholder="Enter description"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot is-justify-content-center">
+          <div class="buttons">
+            <button class="button modal-button-close">Cancel</button
+            ><button class="button modal-button-close">Save</button>
+          </div>
+        </footer>
+      </div>
+    </div>
     <!-- Add new ad modal -->
     <div id="add-ad-modal" class="modal modal-full-screen modal-fx-fadeInScale">
       <div class="modal-background"></div>
