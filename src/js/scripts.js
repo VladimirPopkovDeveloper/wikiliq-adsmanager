@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+
 // Active button images
 const buttonImages = document.querySelectorAll(".button-image");
 
