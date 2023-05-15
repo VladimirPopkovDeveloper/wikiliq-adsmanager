@@ -180,13 +180,13 @@
             </div>
             <div
               class="tile is-parent is-6 modal-button"
-              data-target="edit-brand-modal"
+              data-target="add-brand-modal"
             >
               <div class="tile is-child box has-text-centered">
                 <span class="icon tile-icon">
                   <i class="fa-regular fa-copyright fa-3x"></i>
                 </span>
-                <p class="title">Edit your brand</p>
+                <p class="title">Add your brand</p>
                 <p class="subtitle">tell us about you</p>
               </div>
             </div>
@@ -224,6 +224,31 @@
         id="my-ads-screen"
         class="section main-content-section animate__animated animate__fadeIn"
       >
+        <div class="container mb-3">
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input" type="text" placeholder="Search ad..." />
+                </p>
+              </div>
+              <div class="field">
+                <div class="control is-expanded">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Or select by brand</option>
+                      <option>Jim Beam</option>
+                      <option>Louis Jadot</option>
+                      <option>Beringer</option>
+                      <option>Smirnoff</option>
+                      <option>Mikkeller</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <div class="tile is-ancestor">
             <div class="tile is-12 is-vertical is-parent">
@@ -521,11 +546,112 @@
           </button>
         </div>
       </div>
+      <!-- My Berands Screen -->
+      <div
+        id="my-brands-screen"
+        class="section main-content-section animate__animated animate__fadeIn"
+      >
+        <div class="container">
+          <div class="tile is-ancestor">
+            <div
+              class="tile is-parent modal-button"
+              data-target="add-brand-modal"
+            >
+              <div class="tile is-child box">
+                <figure class="image brand-image">
+                  <img src="images/Jim-Beam.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div
+              class="tile is-parent modal-button"
+              data-target="add-brand-modal"
+            >
+              <div class="tile is-child box">
+                <figure class="image brand-image">
+                  <img src="images/Louis-Jadot-winery-min.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div
+              class="tile is-parent modal-button"
+              data-target="add-brand-modal"
+            >
+              <div class="tile is-child box">
+                <figure class="image brand-image">
+                  <img src="images/Beringer-wine-min.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div
+              class="tile is-parent modal-button"
+              data-target="add-brand-modal"
+            >
+              <div class="tile is-child box">
+                <figure class="image brand-image">
+                  <img src="images/Smirnoff.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div
+              class="tile is-parent modal-button"
+              data-target="add-brand-modal"
+            >
+              <div class="tile is-child box">
+                <figure class="image brand-image">
+                  <img src="images/Mikkeller-brewing-comp-min.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- My Products Screen -->
       <div
         id="my-products-screen"
         class="section main-content-section animate__animated animate__fadeIn"
       >
+        <div class="container mb-3">
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Search product..."
+                  />
+                </p>
+              </div>
+              <div class="field">
+                <div class="control is-expanded">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Or select by brand</option>
+                      <option>Jim Beam</option>
+                      <option>Louis Jadot</option>
+                      <option>Beringer</option>
+                      <option>Smirnoff</option>
+                      <option>Mikkeller</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control is-expanded">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Or select by type</option>
+                      <option>Wine</option>
+                      <option>Beer</option>
+                      <option>Liquor</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <div class="tile is-ancestor">
             <div class="tile is-6 is-parent">
@@ -912,6 +1038,12 @@
         </a>
         <a class="level-item bottom-link"
           ><span class="icon-text"
+            ><span class="icon"><i class="fa-regular fa-copyright"></i></span>
+            <span class="is-hidden-mobile">My brands</span></span
+          >
+        </a>
+        <a class="level-item bottom-link"
+          ><span class="icon-text"
             ><span class="icon"><i class="fa-solid fa-wine-bottle"></i></span>
             <span class="is-hidden-mobile">My products</span></span
           >
@@ -954,8 +1086,191 @@
             <a class="level-item"> About us </a>
             <a class="level-item"> Documentation </a>
             <a class="level-item"> FAQ </a>
-            <a class="level-item"> Suppoort </a>
+            <a class="level-item"> Support </a>
           </nav>
+        </footer>
+      </div>
+    </div>
+    <!-- Add brand modal -->
+    <div
+      id="add-brand-modal"
+      class="modal modal-full-screen modal-fx-fadeInScale"
+    >
+      <div class="modal-background"></div>
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Add your brand</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="container">
+            <div class="columns">
+              <div class="column is-2">
+                <div class="image-loader">
+                  <span>Drop brand logo here</span>
+                </div>
+              </div>
+              <div class="column is-8">
+                <form>
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Brand name</label>
+                    </div>
+
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter brand name"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Address</label>
+                    </div>
+
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter address of your brand"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Web-site</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter brand web-site"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Contact phone</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter phone"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">E-mail</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter your e-mail"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Brand country</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option>Select country</option>
+                              <option>USA</option>
+                              <option>Canada</option>
+                              <option>France</option>
+                              <option>Italy</option>
+                              <option>Spain</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Brand categories</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control is-expanded">
+                          <label class="checkbox">
+                            <input type="checkbox" />
+                            Wine
+                          </label>
+                          <br />
+                          <label class="checkbox">
+                            <input type="checkbox" />
+                            Beer </label
+                          ><br />
+                          <label class="checkbox">
+                            <input type="checkbox" />
+                            Liquor
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Description</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control">
+                          <textarea
+                            class="textarea"
+                            placeholder="Enter description"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot is-justify-content-center">
+          <div class="buttons">
+            <button class="button modal-button-close">Cancel</button
+            ><button class="button modal-button-close">Save</button>
+          </div>
         </footer>
       </div>
     </div>
@@ -980,7 +1295,7 @@
                 <form>
                   <div class="field is-horizontal">
                     <div class="field-label is-normal">
-                      <label class="label">Name</label>
+                      <label class="label">Product Name</label>
                     </div>
 
                     <div class="field-body">
@@ -989,7 +1304,7 @@
                           <input
                             class="input"
                             type="text"
-                            placeholder="Enter name"
+                            placeholder="Enter product name"
                           />
                         </div>
                       </div>
@@ -1003,11 +1318,16 @@
                     <div class="field-body">
                       <div class="field">
                         <div class="control is-expanded">
-                          <input
-                            class="input"
-                            type="text"
-                            placeholder="Enter brand"
-                          />
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option>Select your brand</option>
+                              <option>Brand 1</option>
+                              <option>Brand 2</option>
+                              <option>Brand 3</option>
+                              <option>Brand 4</option>
+                              <option>Brand 5</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1162,12 +1482,12 @@
                     <div class="field-body">
                       <div class="field">
                         <div class="control is-expanded">
-                          <div class="select is-multiple is-fullwidth">
-                            <select multiple>
-                              <option>Red wine</option>
-                              <option>White wine</option>
-                              <option>Rose wine</option>
-                              <option>Sparkling wine</option>
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option>Select category</option>
+                              <option>Wine</option>
+                              <option>Beer</option>
+                              <option>Liquor</option>
                             </select>
                           </div>
                         </div>
