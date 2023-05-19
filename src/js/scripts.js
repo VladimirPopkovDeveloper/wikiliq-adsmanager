@@ -70,7 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Active button images
-const buttonImages = document.querySelectorAll(".button-image");
+const buttonImages = document.querySelectorAll(
+  "#modal-screen-container_position .button-image"
+);
+const bottleImages = document.querySelectorAll(
+  "#modal-screen-container_product .button-image"
+);
+const progressBar = document.querySelector("#progress-bar_ad");
+const modalDate = document.querySelector("#modal-screen-container_date");
 
 buttonImages.forEach((buttonImage) => {
   buttonImage.addEventListener("click", () => {
@@ -80,10 +87,39 @@ buttonImages.forEach((buttonImage) => {
       }
     });
     buttonImage.classList.add("is-active");
+    modalDate.classList.add("is-active");
+    progressBar.setAttribute("value", "33");
+  });
+});
+
+// Calendar set dates
+const startDate = document.querySelector("#start-date");
+const endDate = document.querySelector("#end-date");
+const modalProduct = document.querySelector("#modal-screen-container_product");
+
+endDate.addEventListener("change", () => {
+  modalProduct.classList.add("is-active");
+  progressBar.setAttribute("value", "66");
+});
+
+// Choose bottle to promote
+const modalPrice = document.querySelector("#modal-screen-container_price");
+
+bottleImages.forEach((bottleImage) => {
+  bottleImage.addEventListener("click", () => {
+    bottleImages.forEach((otherBottleImage) => {
+      if (otherBottleImage !== bottleImage) {
+        otherBottleImage.classList.remove("is-active");
+      }
+    });
+    bottleImage.classList.add("is-active");
+    modalPrice.classList.add("is-active");
+    progressBar.setAttribute("value", "100");
   });
 });
 
 // Prev & Next
+/*
 const prevButton = document.querySelector(".prev-next-buttons .prev-button");
 const nextButton = document.querySelector(".prev-next-buttons .next-button");
 const finishButton = document.querySelector(
@@ -133,6 +169,7 @@ nextButton.addEventListener("click", () => {
     prevButton.style.display = "block";
   }
 });
+*/
 
 // Calendar
 // Initialize all input of date type.

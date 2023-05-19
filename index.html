@@ -1528,15 +1528,17 @@
       <div class="modal-background"></div>
       <div class="modal-content modal-card">
         <header class="modal-card-head">
-          <p class="modal-card-title">Add new advertisment</p>
+          <p class="modal-card-title">Add your new advertisment</p>
           <button class="modal-button-close delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
           <div
-            class="container modal-screen-container animate__animated animate__fadeIn"
+            id="modal-screen-container_position"
+            class="container modal-screen-container is-active animate__animated animate__fadeIn mb-5"
           >
             <p class="title has-text-centered">
-              Choose your advertisement position:
+              <span class="has-text-danger">Step 1:</span> Choose your
+              advertisement position:
             </p>
             <div class="columns is-multiline">
               <div class="column is-6">
@@ -1562,10 +1564,12 @@
             </div>
           </div>
           <div
-            class="container modal-screen-container animate__animated animate__fadeIn"
+            id="modal-screen-container_date"
+            class="container modal-screen-container animate__animated animate__fadeIn mb-5"
           >
             <p class="title has-text-centered">
-              Choose your advertisement dates:
+              <span class="has-text-danger">Step 2:</span> Choose your
+              advertisement dates:
             </p>
             <div class="columns is-mulitine">
               <div class="column is-6-desktop is-offset-3-desktop is-12-mobile">
@@ -1578,6 +1582,7 @@
                       <div class="field">
                         <p class="control">
                           <input
+                            id="start-date"
                             class="input is-medium"
                             type="date"
                             data-display-mode="inline"
@@ -1597,6 +1602,7 @@
                       <div class="field">
                         <p class="control">
                           <input
+                            id="end-date"
                             class="input is-medium"
                             type="date"
                             data-display-mode="inline"
@@ -1610,17 +1616,14 @@
                 </form>
               </div>
             </div>
-            <div class="notification is-info is-light">
-              <p class="has-text-centered">
-                Your estimated budget will be: <strong>$12</strong>
-              </p>
-            </div>
           </div>
           <div
-            class="container modal-screen-container animate__animated animate__fadeIn"
+            id="modal-screen-container_product"
+            class="container modal-screen-container animate__animated animate__fadeIn mb-5"
           >
             <p class="title has-text-centered">
-              Choose your product to promote:
+              <span class="has-text-danger">Step 3:</span> Choose your product
+              to promote:
             </p>
             <div class="columns is-mobile is-multiline">
               <div
@@ -1703,8 +1706,34 @@
               </div>
             </div>
           </div>
+          <div
+            id="modal-screen-container_price"
+            class="container modal-screen-container animate__animated animate__fadeIn has-text-centered"
+          >
+            <div class="notification is-info is-light">
+              <p class="has-text-centered">
+                Your estimated budget will be:
+                <strong><span id="estimated-price">$12</span></strong>
+              </p>
+            </div>
+            <button
+              class="modal-button button finish-button modal-button-close"
+            >
+              <span class="icon">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>Publish your advertisment!</span>
+            </button>
+          </div>
         </section>
         <footer class="modal-card-foot is-justify-content-center">
+          <progress
+            id="progress-bar_ad"
+            class="progress is-info"
+            value="0"
+            max="100"
+          ></progress>
+          <!--
           <div class="prev-next-buttons buttons">
             <button class="modal-button button prev-button">
               <span class="icon">
@@ -1725,7 +1754,7 @@
               </span>
             </button>
           </div>
-        </footer>
+        --></footer>
       </div>
     </div>
     <!-- Scripts -->
