@@ -138,16 +138,6 @@
 
         <div class="navbar-end">
           <div class="navbar-item">
-            Your wallet:&nbsp;<span class="has-text-danger">$123.35</span>
-          </div>
-          <div class="navbar-item">
-            <button class="button is-light is-success">
-              <span class="icon is-small"
-                ><i class="fa-regular fa-credit-card"></i></span
-              ><span>Add funds</span>
-            </button>
-          </div>
-          <div class="navbar-item">
             <button class="button is-light is-danger">
               <span class="icon is-small"
                 ><i class="fa-solid fa-arrow-right-from-bracket"></i></span
@@ -1051,7 +1041,7 @@
         <a class="level-item bottom-link"
           ><span class="icon-text"
             ><span class="icon"><i class="fa-solid fa-chart-line"></i></span>
-            <span class="is-hidden-mobile">Statistics</span></span
+            <span class="is-hidden-mobile">Tests</span></span
           >
         </a>
       </nav>
@@ -1534,14 +1524,14 @@
         <section class="modal-card-body">
           <div
             id="modal-screen-container_position"
-            class="container modal-screen-container is-active animate__animated animate__fadeIn mb-5"
+            class="container is-fluid modal-screen-container is-active animate__animated animate__fadeIn mb-5"
           >
             <p class="title has-text-centered">
               <span class="has-text-danger">Step 1:</span> Choose your
               advertisement position:
             </p>
             <div class="columns is-multiline">
-              <div class="column is-6">
+              <div class="column is-3">
                 <p class="subtitle has-text-centered">On the Main page:</p>
                 <figure>
                   <img
@@ -1551,7 +1541,7 @@
                   />
                 </figure>
               </div>
-              <div class="column is-6">
+              <div class="column is-3">
                 <p class="subtitle has-text-centered">On the Trending page:</p>
                 <figure>
                   <img
@@ -1561,59 +1551,67 @@
                   />
                 </figure>
               </div>
+              <div class="column is-3">
+                <p class="subtitle has-text-centered">On the Top 10 page:</p>
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/top10-ad.png"
+                    alt="trending-ad"
+                  />
+                </figure>
+              </div>
+              <div class="column is-3">
+                <p class="subtitle has-text-centered">On the Category page:</p>
+                <figure>
+                  <img
+                    class="button-image"
+                    src="images/category-ad.png"
+                    alt="trending-ad"
+                  />
+                </figure>
+              </div>
             </div>
           </div>
           <div
-            id="modal-screen-container_date"
+            id="modal-screen-container_pack"
             class="container modal-screen-container animate__animated animate__fadeIn mb-5"
           >
             <p class="title has-text-centered">
               <span class="has-text-danger">Step 2:</span> Choose your
-              advertisement dates:
+              advertisement pack:
             </p>
             <div class="columns is-mulitine">
-              <div class="column is-6-desktop is-offset-3-desktop is-12-mobile">
-                <form action="">
-                  <div class="field is-horizontal">
-                    <div class="field-label is-medium">
-                      <label class="label">Start from:</label>
-                    </div>
-                    <div class="field-body">
-                      <div class="field">
-                        <p class="control">
-                          <input
-                            id="start-date"
-                            class="input is-medium"
-                            type="date"
-                            data-display-mode="inline"
-                            data-is-range="true"
-                            data-close-on-select="false"
-                          />
-                        </p>
-                      </div>
+              <div class="column is-8-desktop is-offset-2-desktop is-12-mobile">
+                <div class="tile is-ancestor">
+                  <div class="tile is-parent is-4 button-image">
+                    <div class="tile is-child has-text-centered">
+                      <span class="icon tile-icon">
+                        <i class="fa-solid fa-user fa-3x"></i>
+                      </span>
+                      <p class="title">7 days <sup>$5</sup></p>
+                      <p class="subtitle">First start</p>
                     </div>
                   </div>
-
-                  <div class="field is-horizontal">
-                    <div class="field-label is-medium">
-                      <label class="label">Show by:</label>
-                    </div>
-                    <div class="field-body">
-                      <div class="field">
-                        <p class="control">
-                          <input
-                            id="end-date"
-                            class="input is-medium"
-                            type="date"
-                            data-display-mode="inline"
-                            data-is-range="true"
-                            data-close-on-select="false"
-                          />
-                        </p>
-                      </div>
+                  <div class="tile is-parent is-4 button-image">
+                    <div class="tile is-child has-text-centered">
+                      <span class="icon tile-icon">
+                        <i class="fa-solid fa-user-graduate fa-3x"></i>
+                      </span>
+                      <p class="title">10 days <sup>$7</sup></p>
+                      <p class="subtitle">Advanced</p>
                     </div>
                   </div>
-                </form>
+                  <div class="tile is-parent is-4 button-image">
+                    <div class="tile is-child has-text-centered">
+                      <span class="icon tile-icon">
+                        <i class="fa-solid fa-user-tie fa-3x"></i>
+                      </span>
+                      <p class="title">14 days <sup>$10</sup></p>
+                      <p class="subtitle">Professional</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1710,19 +1708,24 @@
             id="modal-screen-container_price"
             class="container modal-screen-container animate__animated animate__fadeIn has-text-centered"
           >
-            <div class="notification is-info is-light">
-              <p class="has-text-centered">
-                Your estimated budget will be:
-                <strong><span id="estimated-price">$12</span></strong>
-              </p>
-            </div>
+            <p class="title has-text-centered">
+              <span class="has-text-danger">Step 4:</span> Check your dates:
+            </p>
+            <div id="freeDatesCalendar" class="green"></div>
             <button
+              class="modal-button button finish-button modal-button-close"
+            >
+              <span class="icon">
+                <i class="fa-regular fa-eye"></i>
+              </span>
+              <span>Preview your advertisement</span></button
+            >&nbsp;<button
               class="modal-button button finish-button modal-button-close"
             >
               <span class="icon">
                 <i class="fa-solid fa-check"></i>
               </span>
-              <span>Publish your advertisment!</span>
+              <span>Pay & Publish!</span>
             </button>
           </div>
         </section>

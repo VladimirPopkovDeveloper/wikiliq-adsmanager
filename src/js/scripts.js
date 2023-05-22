@@ -76,8 +76,11 @@ const buttonImages = document.querySelectorAll(
 const bottleImages = document.querySelectorAll(
   "#modal-screen-container_product .button-image"
 );
+const packBlocks = document.querySelectorAll(
+  "#modal-screen-container_pack .button-image"
+);
 const progressBar = document.querySelector("#progress-bar_ad");
-const modalDate = document.querySelector("#modal-screen-container_date");
+const modalPack = document.querySelector("#modal-screen-container_pack");
 
 buttonImages.forEach((buttonImage) => {
   buttonImage.addEventListener("click", () => {
@@ -87,19 +90,29 @@ buttonImages.forEach((buttonImage) => {
       }
     });
     buttonImage.classList.add("is-active");
-    modalDate.classList.add("is-active");
+    modalPack.classList.add("is-active");
+    selectRandomDates();
+
     progressBar.setAttribute("value", "33");
   });
 });
 
-// Calendar set dates
-const startDate = document.querySelector("#start-date");
-const endDate = document.querySelector("#end-date");
+// Choose pack
 const modalProduct = document.querySelector("#modal-screen-container_product");
 
-endDate.addEventListener("change", () => {
-  modalProduct.classList.add("is-active");
-  progressBar.setAttribute("value", "66");
+packBlocks.forEach((packBlock) => {
+  packBlock.addEventListener("click", () => {
+    packBlocks.forEach((otherpackBlock) => {
+      if (otherpackBlock !== packBlock) {
+        otherpackBlock.classList.remove("is-active");
+      }
+    });
+    packBlock.classList.add("is-active");
+    modalProduct.classList.add("is-active");
+    selectRandomDates();
+
+    progressBar.setAttribute("value", "66");
+  });
 });
 
 // Choose bottle to promote
@@ -114,64 +127,67 @@ bottleImages.forEach((bottleImage) => {
     });
     bottleImage.classList.add("is-active");
     modalPrice.classList.add("is-active");
+    selectRandomDates();
     progressBar.setAttribute("value", "100");
   });
 });
 
-// Prev & Next
-/*
-const prevButton = document.querySelector(".prev-next-buttons .prev-button");
-const nextButton = document.querySelector(".prev-next-buttons .next-button");
-const finishButton = document.querySelector(
-  ".prev-next-buttons .finish-button"
-);
-console.log(prevButton);
-const modalScreenContainers = document.querySelectorAll(
-  ".modal-screen-container"
-);
+// Calendars
+// jsCalendar
+// Get the element
+let calEl = document.getElementById("freeDatesCalendar");
+// Get & format current date
+const getCurrentDate = () => {
+  const currentDate = new Date();
+  let day = currentDate.getDate();
+  let month = currentDate.getMonth() + 1;
+  const year = currentDate.getFullYear();
+  day = day < 10 ? "0" + day : day;
+  month = month < 10 ? "0" + month : month;
+  const formattedDate = `${day}/${month}/${year}`;
+  return formattedDate;
+};
 
-let activeScreenContainerIndex = 0;
-prevButton.style.display = "none";
-finishButton.style.display = "none";
-modalScreenContainers[activeScreenContainerIndex].classList.add("is-active");
+function generateRandomDates() {
+  const currentDate = new Date();
+  const randomDates = [];
 
-prevButton.addEventListener("click", () => {
-  if (activeScreenContainerIndex > 0) {
-    modalScreenContainers[activeScreenContainerIndex].classList.remove(
-      "is-active"
-    );
-    activeScreenContainerIndex--;
-    modalScreenContainers[activeScreenContainerIndex].classList.add(
-      "is-active"
-    );
-    if (activeScreenContainerIndex === 0) {
-      prevButton.style.display = "none";
-      finishButton.style.display = "none";
-    }
-    nextButton.style.display = "block";
-    finishButton.style.display = "none";
+  for (let i = 0; i < 6; i++) {
+    const randomOffset = Math.floor(Math.random() * 11); // Генерируем случайное смещение от 0 до 10
+    const date = new Date(
+      currentDate.getTime() + randomOffset * 24 * 60 * 60 * 1000
+    ); // Добавляем смещение к текущей дате
+
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const formattedDate = `${day < 10 ? "0" + day : day}/${
+      month < 10 ? "0" + month : month
+    }/${year}`;
+
+    randomDates.push(formattedDate);
   }
+  return randomDates;
+}
+
+// Генерируем случайные даты
+//const randomDates = generateRandomDates();
+
+// Create the calendar
+let freeDatesCalendar = jsCalendar.new(calEl, getCurrentDate(), {
+  navigator: true,
+  navigatorPosition: "left",
+  zeroFill: false,
+  monthFormat: "month YYYY",
+  dayFormat: "DDD",
+  language: "en",
 });
 
-nextButton.addEventListener("click", () => {
-  if (activeScreenContainerIndex < modalScreenContainers.length - 1) {
-    modalScreenContainers[activeScreenContainerIndex].classList.remove(
-      "is-active"
-    );
-    activeScreenContainerIndex++;
-    modalScreenContainers[activeScreenContainerIndex].classList.add(
-      "is-active"
-    );
-    if (activeScreenContainerIndex === modalScreenContainers.length - 1) {
-      nextButton.style.display = "none";
-      finishButton.style.display = "block";
-    }
-    prevButton.style.display = "block";
-  }
-});
-*/
+function selectRandomDates() {
+  freeDatesCalendar.clearselect();
+  freeDatesCalendar.select(generateRandomDates());
+}
 
-// Calendar
 // Initialize all input of date type.
 const calendars = bulmaCalendar.attach('[type="date"]', options);
 
