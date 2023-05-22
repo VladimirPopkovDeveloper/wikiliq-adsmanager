@@ -33,10 +33,11 @@ tabs.forEach((tab, index) => {
 });
 
 // Bottom menu & main content
-const bottom_links = document.querySelectorAll(".bottom-navbar .bottom-link");
 const mainContentSections = document.querySelectorAll(
   ".main-content .main-content-section"
 );
+const bottom_links = document.querySelectorAll(".bottom-navbar .bottom-link");
+const side_links = document.querySelectorAll(".side-navbar .side-link");
 
 bottom_links.forEach((bottom_link, index) => {
   bottom_link.addEventListener("click", () => {
@@ -48,6 +49,20 @@ bottom_links.forEach((bottom_link, index) => {
     );
 
     bottom_link.classList.add("is-active");
+    mainContentSections[index].classList.add("is-active");
+  });
+});
+
+// Side menu & main content
+
+side_links.forEach((side_link, index) => {
+  side_link.addEventListener("click", () => {
+    side_links.forEach((side_link) => side_link.classList.remove("is-active"));
+    mainContentSections.forEach((section) =>
+      section.classList.remove("is-active")
+    );
+
+    side_link.classList.add("is-active");
     mainContentSections[index].classList.add("is-active");
   });
 });

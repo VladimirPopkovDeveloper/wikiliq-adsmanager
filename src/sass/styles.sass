@@ -72,6 +72,21 @@ a
 	+transition
 
 // Navbars
+.side-navbar
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 3rem
+	height: 100vh
+	background: $white
+	border-right: 1px solid #eaeaea
+	.side-link
+		margin: .5rem .25rem
+
 .bottom-navbar
 	background-color: $white
 	border-top: 1px solid #eaeaea
@@ -80,15 +95,16 @@ a
 	z-index: 10
 	width: 100%
 	bottom: 0
-.bottom-link
+.bottom-link, .side-link
 	color: $black-ter
 	&:hover
 		color: $liq-red
 	&.is-active
 		color: $liq-red
 
-// 
 // Sections
+.main-content
+	padding-left: 3rem
 .footer
 	position: fixed
 	width: 100%
