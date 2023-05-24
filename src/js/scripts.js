@@ -94,8 +94,25 @@ const bottleImages = document.querySelectorAll(
 const packBlocks = document.querySelectorAll(
   "#modal-screen-container_pack .button-image"
 );
+const productTypes = document.querySelectorAll(
+  "#modal-screen-container_product-type .button-image"
+);
 const modalPack = document.querySelector("#modal-screen-container_pack");
 
+// Choose product type
+productTypes.forEach((productType) => {
+  productType.addEventListener("click", () => {
+    productTypes.forEach((otherProductType) => {
+      if (otherProductType !== productType) {
+        otherProductType.classList.remove("is-active");
+      }
+    });
+    productType.classList.add("is-active");
+    //modalPack.classList.add("is-active");
+  });
+});
+
+// Choose ad position
 buttonImages.forEach((buttonImage) => {
   buttonImage.addEventListener("click", () => {
     buttonImages.forEach((otherButtonImage) => {

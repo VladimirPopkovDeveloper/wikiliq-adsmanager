@@ -581,7 +581,7 @@
         <div class="container">
           <div class="tile is-ancestor">
             <div
-              class="tile is-parent modal-button"
+              class="tile is-2 is-parent modal-button"
               data-target="add-brand-modal"
             >
               <div class="tile is-child box">
@@ -591,7 +591,7 @@
               </div>
             </div>
             <div
-              class="tile is-parent modal-button"
+              class="tile is-2 is-parent modal-button"
               data-target="add-brand-modal"
             >
               <div class="tile is-child box">
@@ -601,7 +601,7 @@
               </div>
             </div>
             <div
-              class="tile is-parent modal-button"
+              class="tile is-2 is-parent modal-button"
               data-target="add-brand-modal"
             >
               <div class="tile is-child box">
@@ -611,7 +611,7 @@
               </div>
             </div>
             <div
-              class="tile is-parent modal-button"
+              class="tile is-2 is-parent modal-button"
               data-target="add-brand-modal"
             >
               <div class="tile is-child box">
@@ -621,7 +621,7 @@
               </div>
             </div>
             <div
-              class="tile is-parent modal-button"
+              class="tile is-2 is-parent modal-button"
               data-target="add-brand-modal"
             >
               <div class="tile is-child box">
@@ -1098,7 +1098,7 @@
     </nav>
     <!-- Bottom navbar -->
     <footer>
-      <nav class="bottom-navbar level">
+      <nav class="bottom-navbar level is-mobile">
         <a class="level-item bottom-link is-active">
           <span class="icon-text"
             ><span class="icon"><i class="fa-solid fa-house"></i></span>
@@ -1413,7 +1413,50 @@
           <button class="modal-button-close delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
+          <div
+            id="modal-screen-container_product-type"
+            class="container is-fluid modal-screen-container is-active animate__animated animate__fadeIn mb-5"
+          >
+            <p class="title has-text-centered">
+              <span class="has-text-danger">Step 1:</span> Choose your product
+              type:
+            </p>
+            <div class="columns">
+              <div class="column is-8-desktop is-offset-2-desktop is-12-mobile">
+                <div class="tile is-ancestor">
+                  <div class="tile is-parent is-4">
+                    <div class="tile is-child has-text-centered button-image">
+                      <span class="icon tile-icon">
+                        <i class="fa-solid fa-wine-glass fa-3x"></i>
+                      </span>
+                      <p class="title">Wine</p>
+                    </div>
+                  </div>
+                  <div class="tile is-parent is-4">
+                    <div class="tile is-child has-text-centered button-image">
+                      <span class="icon tile-icon">
+                        <i class="fa-solid fa-beer-mug-empty fa-3x"></i>
+                      </span>
+                      <p class="title">Beer</p>
+                    </div>
+                  </div>
+                  <div class="tile is-parent is-4">
+                    <div class="tile is-child has-text-centered button-image">
+                      <span class="icon tile-icon">
+                        <i class="fa-solid fa-martini-glass fa-3x"></i>
+                      </span>
+                      <p class="title">Liquor</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="container">
+            <p class="title has-text-centered">
+              <span class="has-text-danger">Step 2:</span> Fill your product
+              data:
+            </p>
             <div class="columns">
               <div class="column is-2">
                 <div class="image-loader"><span>Drop image here</span></div>
@@ -1655,7 +1698,7 @@
       <div class="modal-background"></div>
       <div class="modal-content modal-card">
         <header class="modal-card-head">
-          <p class="modal-card-title">Add your new advertisment</p>
+          <p class="modal-card-title">Add new advertisment</p>
           <button class="modal-button-close delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
@@ -1857,7 +1900,7 @@
             class="container modal-screen-container animate__animated animate__fadeIn has-text-centered"
           >
             <p class="title has-text-centered">
-              <span class="has-text-danger">Step 4:</span> Check your dates:
+              <span class="has-text-danger">Step 4:</span> Saggested dates:
             </p>
             <div id="freeDatesCalendar" class="green"></div>
             <button class="modal-button button">

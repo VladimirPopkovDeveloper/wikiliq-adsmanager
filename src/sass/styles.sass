@@ -89,7 +89,7 @@ a
 	.side-link
 		margin: .5rem .25rem
 
-.bottom-navbar
+.bottom-navbar.level.is-mobile
 	background-color: $white
 	border-top: 1px solid #eaeaea
 	padding: 1.5rem .75rem
@@ -99,6 +99,7 @@ a
 	bottom: 0
 	@include desktop
 		display: none
+
 .bottom-link, .side-link
 	color: $black-ter
 	&:hover
@@ -143,7 +144,7 @@ input[type=checkbox]
 	button
 		&:active,
 		&:focus
-			border: 1px solid $liq-red
+			border: 2px solid $liq-red
 // Components
 #freeDatesCalendar
 	max-width: 310px
