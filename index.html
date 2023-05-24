@@ -120,6 +120,7 @@
               <a class="navbar-item">FAQ</a>
               <a class="navbar-item">Get support</a>
               <hr class="navbar-divider" />
+              <a class="navbar-item">About us</a>
               <a class="navbar-item">Terms & conditions</a>
             </div>
           </div>
@@ -236,6 +237,18 @@
                   </div>
                 </div>
               </div>
+              <div class="field">
+                <div class="control is-expanded">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Filter by status</option>
+                      <option>Active</option>
+                      <option>Pending</option>
+                      <option>Complited</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -263,7 +276,7 @@
                   </div>
                   <div class="column is-2">
                     <p class="subtitle">
-                      <strong>Budget:</strong> $15<br />
+                      <strong>Ad pack:</strong> First start $7<br />
                       <strong>Status:</strong>
                       <span class="has-text-success">Active</span>
                     </p>
@@ -273,21 +286,21 @@
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-regular fa-eye"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-pause"></i>
+                            <i class="fa-solid fa-clone"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-stop"></i>
+                            <i class="fa-solid fa-repeat"></i>
                           </span>
                         </button>
                       </p>
@@ -296,14 +309,20 @@
                   <div class="column is-2">
                     <div class="field has-addons">
                       <p class="control">
-                        <button class="button is-small is-info">
+                        <button
+                          class="button is-small is-info modal-button"
+                          data-target="add-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-solid fa-edit"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
-                        <button class="button is-small is-danger">
+                        <button
+                          class="button is-small is-danger modal-button"
+                          data-target="delete-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-regular fa-trash-can"></i>
                           </span>
@@ -334,7 +353,7 @@
                   </div>
                   <div class="column is-2">
                     <p class="subtitle">
-                      <strong>Budget:</strong> $25<br />
+                      <strong>Ad pack:</strong> Advanced $7<br />
                       <strong>Status:</strong>
                       <span class="has-text-success">Active</span>
                     </p>
@@ -344,21 +363,21 @@
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-regular fa-eye"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-pause"></i>
+                            <i class="fa-solid fa-clone"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-stop"></i>
+                            <i class="fa-solid fa-repeat"></i>
                           </span>
                         </button>
                       </p>
@@ -367,14 +386,20 @@
                   <div class="column is-2">
                     <div class="field has-addons">
                       <p class="control">
-                        <button class="button is-small is-info">
+                        <button
+                          class="button is-small is-info modal-button"
+                          data-target="add-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-solid fa-edit"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
-                        <button class="button is-small is-danger">
+                        <button
+                          class="button is-small is-danger modal-button"
+                          data-target="delete-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-regular fa-trash-can"></i>
                           </span>
@@ -402,9 +427,9 @@
                   </div>
                   <div class="column is-2">
                     <p class="subtitle">
-                      <strong>Budget:</strong> $12<br />
+                      <strong>Ad pack:</strong> First start $7<br />
                       <strong>Status:</strong>
-                      <span class="has-text-warning">Paused</span>
+                      <span class="has-text-warning">Pending</span>
                     </p>
                   </div>
                   <div class="column is-2 has-text-right">
@@ -412,21 +437,21 @@
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-regular fa-eye"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-pause"></i>
+                            <i class="fa-solid fa-clone"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-stop"></i>
+                            <i class="fa-solid fa-repeat"></i>
                           </span>
                         </button>
                       </p>
@@ -435,14 +460,20 @@
                   <div class="column is-2">
                     <div class="field has-addons">
                       <p class="control">
-                        <button class="button is-small is-info">
+                        <button
+                          class="button is-small is-info modal-button"
+                          data-target="add-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-solid fa-edit"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
-                        <button class="button is-small is-danger">
+                        <button
+                          class="button is-small is-danger modal-button"
+                          data-target="delete-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-regular fa-trash-can"></i>
                           </span>
@@ -473,9 +504,9 @@
                   </div>
                   <div class="column is-2">
                     <p class="subtitle">
-                      <strong>Budget:</strong> $10<br />
+                      <strong>Ad pack:</strong> Pro $10<br />
                       <strong>Status:</strong>
-                      <span class="has-text-danger">Stopped</span>
+                      <span class="has-text-danger">Completed</span>
                     </p>
                   </div>
                   <div class="column is-2 has-text-right">
@@ -483,21 +514,21 @@
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-regular fa-eye"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-pause"></i>
+                            <i class="fa-solid fa-clone"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
                         <button class="button is-small">
                           <span class="icon is-small">
-                            <i class="fa-solid fa-stop"></i>
+                            <i class="fa-solid fa-repeat"></i>
                           </span>
                         </button>
                       </p>
@@ -506,14 +537,20 @@
                   <div class="column is-2">
                     <div class="field has-addons">
                       <p class="control">
-                        <button class="button is-small is-info">
+                        <button
+                          class="button is-small is-info modal-button"
+                          data-target="add-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-solid fa-edit"></i>
                           </span>
                         </button>
                       </p>
                       <p class="control">
-                        <button class="button is-small is-danger">
+                        <button
+                          class="button is-small is-danger modal-button"
+                          data-target="delete-ad-modal"
+                        >
                           <span class="icon is-small">
                             <i class="fa-regular fa-trash-can"></i>
                           </span>
@@ -532,11 +569,11 @@
             data-target="add-ad-modal"
           >
             <span class="icon"><i class="fa-solid fa-plus"></i></span
-            ><span>Add new avertisment</span>
+            ><span>Add new advertisement</span>
           </button>
         </div>
       </div>
-      <!-- My Berands Screen -->
+      <!-- My Brands Screen -->
       <div
         id="my-brands-screen"
         class="section main-content-section animate__animated animate__fadeIn"
@@ -594,6 +631,15 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="container has-text-centered is-fluid my-5">
+          <button
+            class="button modal-button is-medium"
+            data-target="add-brand-modal"
+          >
+            <span class="icon"><i class="fa-regular fa-copyright"></i></span
+            ><span>Add new brand</span>
+          </button>
         </div>
       </div>
       <!-- My Products Screen -->
@@ -670,7 +716,10 @@
                               <i class="fa-solid fa-edit"></i>
                             </span>
                           </button>
-                          <button class="button is-small">
+                          <button
+                            class="button is-small modal-button"
+                            data-target="delete-product-modal"
+                          >
                             <span class="icon is-small">
                               <i class="fa-regular fa-trash-can"></i>
                             </span></button></span
@@ -753,7 +802,10 @@
                               <i class="fa-solid fa-edit"></i>
                             </span>
                           </button>
-                          <button class="button is-small">
+                          <button
+                            class="button is-small modal-button"
+                            data-target="delete-product-modal"
+                          >
                             <span class="icon is-small">
                               <i class="fa-regular fa-trash-can"></i>
                             </span></button></span
@@ -838,7 +890,10 @@
                               <i class="fa-solid fa-edit"></i>
                             </span>
                           </button>
-                          <button class="button is-small">
+                          <button
+                            class="button is-small modal-button"
+                            data-target="delete-product-modal"
+                          >
                             <span class="icon is-small">
                               <i class="fa-regular fa-trash-can"></i>
                             </span></button></span
@@ -921,7 +976,10 @@
                               <i class="fa-solid fa-edit"></i>
                             </span>
                           </button>
-                          <button class="button is-small">
+                          <button
+                            class="button is-small modal-button"
+                            data-target="delete-product-modal"
+                          >
                             <span class="icon is-small">
                               <i class="fa-regular fa-trash-can"></i>
                             </span></button></span
@@ -1089,6 +1147,58 @@
     </div>
 
     <!-- Modals -->
+    <!-- Delete product modal -->
+    <div id="delete-product-modal" class="modal modal-fx-fadeInScale">
+      <div class="modal-background"></div>
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Delete your product</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <p class="subtitle has-text-centered">
+            <strong>Warning!</strong><br />
+            This action permanently delete your product without recover
+            ability.<br />
+            Are you sure to continue?
+          </p>
+        </section>
+        <footer class="modal-card-foot is-justify-content-center">
+          <div class="buttons">
+            <button class="button modal-button-close">Cancel</button
+            ><button class="button is-danger modal-button-close">
+              Delete product
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- Delete ad modal -->
+    <div id="delete-ad-modal" class="modal modal-fx-fadeInScale">
+      <div class="modal-background"></div>
+      <div class="modal-content modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Delete your advertisement</p>
+          <button class="modal-button-close delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <p class="subtitle has-text-centered">
+            <strong>Warning!</strong><br />
+            This action permanently delete your advertisement without recover
+            ability.<br />
+            Are you sure to continue?
+          </p>
+        </section>
+        <footer class="modal-card-foot is-justify-content-center">
+          <div class="buttons">
+            <button class="button modal-button-close">Cancel</button
+            ><button class="button is-danger modal-button-close">
+              Delete advertisement
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
     <!-- Help modal -->
     <div id="help-modal" class="modal modal-full-screen modal-fx-fadeInScale">
       <div class="modal-background"></div>
@@ -1750,9 +1860,7 @@
               <span class="has-text-danger">Step 4:</span> Check your dates:
             </p>
             <div id="freeDatesCalendar" class="green"></div>
-            <button
-              class="modal-button button finish-button modal-button-close"
-            >
+            <button class="modal-button button">
               <span class="icon">
                 <i class="fa-regular fa-eye"></i>
               </span>
