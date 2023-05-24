@@ -94,7 +94,6 @@ const bottleImages = document.querySelectorAll(
 const packBlocks = document.querySelectorAll(
   "#modal-screen-container_pack .button-image"
 );
-const progressBar = document.querySelector("#progress-bar_ad");
 const modalPack = document.querySelector("#modal-screen-container_pack");
 
 buttonImages.forEach((buttonImage) => {
@@ -107,8 +106,6 @@ buttonImages.forEach((buttonImage) => {
     buttonImage.classList.add("is-active");
     modalPack.classList.add("is-active");
     selectRandomDates();
-
-    progressBar.setAttribute("value", "33");
   });
 });
 
@@ -125,8 +122,6 @@ packBlocks.forEach((packBlock) => {
     packBlock.classList.add("is-active");
     modalProduct.classList.add("is-active");
     selectRandomDates();
-
-    progressBar.setAttribute("value", "66");
   });
 });
 
@@ -143,7 +138,6 @@ bottleImages.forEach((bottleImage) => {
     bottleImage.classList.add("is-active");
     modalPrice.classList.add("is-active");
     selectRandomDates();
-    progressBar.setAttribute("value", "100");
   });
 });
 
@@ -163,26 +157,23 @@ const getCurrentDate = () => {
   return formattedDate;
 };
 
-function generateRandomDates() {
+function generateRandomDate() {
   const currentDate = new Date();
-  const randomDates = [];
 
-  for (let i = 0; i < 6; i++) {
-    const randomOffset = Math.floor(Math.random() * 11); // Генерируем случайное смещение от 0 до 10
-    const date = new Date(
-      currentDate.getTime() + randomOffset * 24 * 60 * 60 * 1000
-    ); // Добавляем смещение к текущей дате
+  const randomOffset = Math.floor(Math.random() * 5); // Генерируем случайное смещение от 0 до 5
+  const date = new Date(
+    currentDate.getTime() + randomOffset * 24 * 60 * 60 * 1000
+  ); // Добавляем смещение к текущей дате
 
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    const formattedDate = `${day < 10 ? "0" + day : day}/${
-      month < 10 ? "0" + month : month
-    }/${year}`;
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  const formattedDate = `${day < 10 ? "0" + day : day}/${
+    month < 10 ? "0" + month : month
+  }/${year}`;
 
-    randomDates.push(formattedDate);
-  }
-  return randomDates;
+  randomDate = formattedDate;
+  return randomDate;
 }
 
 // Генерируем случайные даты
@@ -200,25 +191,5 @@ let freeDatesCalendar = jsCalendar.new(calEl, getCurrentDate(), {
 
 function selectRandomDates() {
   freeDatesCalendar.clearselect();
-  freeDatesCalendar.select(generateRandomDates());
-}
-
-// Initialize all input of date type.
-const calendars = bulmaCalendar.attach('[type="date"]', options);
-
-// Loop on each calendar initialized
-calendars.forEach((calendar) => {
-  // Add listener to select event
-  calendar.on("select", (date) => {
-    console.log(date);
-  });
-});
-
-// To access to bulmaCalendar instance of an element
-const element = document.querySelector("#my-element");
-if (element) {
-  // bulmaCalendar instance is available as element.bulmaCalendar
-  element.bulmaCalendar.on("select", (datepicker) => {
-    console.log(datepicker.data.value());
-  });
+  freeDatesCalendar.select(generateRandomDate());
 }
