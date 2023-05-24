@@ -1452,16 +1452,15 @@
               </div>
             </div>
           </div>
-          <div class="container">
+          <div
+            class="container is-fluid modal-screen-container is-active animate__animated animate__fadeIn mb-5"
+          >
             <p class="title has-text-centered">
               <span class="has-text-danger">Step 2:</span> Fill your product
               data:
             </p>
             <div class="columns">
-              <div class="column is-2">
-                <div class="image-loader"><span>Drop image here</span></div>
-              </div>
-              <div class="column is-8">
+              <div class="column is-8 is-offset-2-desktop">
                 <form>
                   <div class="field is-horizontal">
                     <div class="field-label is-normal">
@@ -1684,13 +1683,39 @@
               </div>
             </div>
           </div>
-        </section>
-        <footer class="modal-card-foot is-justify-content-center">
-          <div class="buttons">
-            <button class="button modal-button-close">Cancel</button
-            ><button class="button modal-button-close">Save</button>
+          <div
+            class="container is-fluid modal-screen-container is-active animate__animated animate__fadeIn has-text-centered"
+          >
+            <p class="title has-text-centered">
+              <span class="has-text-danger">Step 3:</span> Upload your product
+              images:
+            </p>
+            <div class="columns">
+              <div class="column is-2 is-offset-3-desktop">
+                <div class="image-loader"><span>Drop image here</span></div>
+              </div>
+              <div class="column is-2">
+                <div class="image-loader"><span>Drop image here</span></div>
+              </div>
+              <div class="column is-2">
+                <div class="image-loader"><span>Drop image here</span></div>
+              </div>
+            </div>
+            <button class="modal-button button">
+              <span class="icon">
+                <i class="fa-regular fa-eye"></i>
+              </span>
+              <span>Preview your product</span></button
+            >&nbsp;<button
+              class="modal-button button finish-button modal-button-close"
+            >
+              <span class="icon">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>Save</span>
+            </button>
           </div>
-        </footer>
+        </section>
       </div>
     </div>
     <!-- Add new ad modal -->
