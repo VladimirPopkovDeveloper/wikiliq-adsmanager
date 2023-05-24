@@ -174,27 +174,28 @@ const getCurrentDate = () => {
   return formattedDate;
 };
 
-function generateRandomDate() {
+const generateRandomDates = () => {
   const currentDate = new Date();
-
-  const randomOffset = Math.floor(Math.random() * 5); // Генерируем случайное смещение от 0 до 5
-  const date = new Date(
+  const randomOffset = Math.floor(Math.random() * 6) + 1; // Генерируем случайное смещение от 1 до 6
+  const firstDate = new Date(
     currentDate.getTime() + randomOffset * 24 * 60 * 60 * 1000
   ); // Добавляем смещение к текущей дате
+  const randomDates = [];
 
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-  const formattedDate = `${day < 10 ? "0" + day : day}/${
-    month < 10 ? "0" + month : month
-  }/${year}`;
+  for (let i = 0; i < 5; i++) {
+    const date = new Date(firstDate.getTime() + i * 24 * 60 * 60 * 1000); // Увеличиваем дату на один день
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const formattedDate = `${day < 10 ? "0" + day : day}/${
+      month < 10 ? "0" + month : month
+    }/${year}`;
 
-  randomDate = formattedDate;
-  return randomDate;
-}
+    randomDates.push(formattedDate);
+  }
 
-// Генерируем случайные даты
-//const randomDates = generateRandomDates();
+  return randomDates;
+};
 
 // Create the calendar
 let freeDatesCalendar = jsCalendar.new(calEl, getCurrentDate(), {
@@ -208,5 +209,5 @@ let freeDatesCalendar = jsCalendar.new(calEl, getCurrentDate(), {
 
 function selectRandomDates() {
   freeDatesCalendar.clearselect();
-  freeDatesCalendar.select(generateRandomDate());
+  freeDatesCalendar.select(generateRandomDates());
 }

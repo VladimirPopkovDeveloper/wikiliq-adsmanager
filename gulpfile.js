@@ -52,12 +52,12 @@ function scripts() {
 // Обрабатываем стили
 function styles() {
   return src([
-    "src/sass/fonts.sass", // Выбираем источник: "src/sass/fonts.sass"
-    "src/sass/styles.sass", // Выбираем источник: "src/sass/styles.sass"
     "node_modules/animate.css/animate.css", // Animate.css
     "node_modules/bulma-modal-fx/dist/css/modal-fx.css", // Bulma Modal FX
     "node_modules/bulma-calendar/dist/css/bulma-calendar.css", // Bulma Calendar CSS
     "node_modules/simple-jscalendar/source/jsCalendar.css", // Simple Calendar
+    "src/sass/fonts.sass", // Выбираем источник: "src/sass/fonts.sass"
+    "src/sass/styles.sass", // Выбираем источник: "src/sass/styles.sass"
   ])
     .pipe(sass()) // Компилируем sass в css
     .pipe(concat("styles.min.css")) // Конкатенируем в файл app.min.js
