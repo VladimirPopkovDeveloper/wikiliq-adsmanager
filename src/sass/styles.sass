@@ -84,6 +84,8 @@ a
 	height: 100vh
 	background: $white
 	border-right: 1px solid #eaeaea
+	@include touch
+		display: none
 	.side-link
 		margin: .5rem .25rem
 
@@ -95,6 +97,8 @@ a
 	z-index: 10
 	width: 100%
 	bottom: 0
+	@include desktop
+		display: none
 .bottom-link, .side-link
 	color: $black-ter
 	&:hover
@@ -105,6 +109,8 @@ a
 // Sections
 .main-content
 	padding-left: 3rem
+	@include touch
+		padding-left: 0
 .footer
 	position: fixed
 	width: 100%
@@ -133,6 +139,11 @@ input[type=checkbox]
 	-o-transform: scale(1.5)
 	transform: scale(1.5)
 	margin: .5rem .5rem .5rem .25rem
+.sticker-buttons
+	button
+		&:active,
+		&:focus
+			border: 1px solid $liq-red
 // Components
 #freeDatesCalendar
 	max-width: 310px
